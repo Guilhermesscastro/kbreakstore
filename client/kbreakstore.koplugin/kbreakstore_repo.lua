@@ -1,15 +1,17 @@
 --[[
     KindleBreak Store Repository Manager (kbreakstore_repo.lua)
     Fetches manifest.v2.json, caches locally, and resolves package states.
-    Falls back gracefully to bundled manifest.v2.json if remote is unreachable.
 --]]
 
 local DataStorage = require("datastorage")
 local logger = require("logger")
 local socketutil = require("socketutil")
-local http = require("socket.http")
-local ltn12 = require("ltn12")
 local json = require("json")
+
+-- Try loading ssl.https for TLS, fallback to socket.http
+local has_ssl, https = pcall(require, "ssl.https")
+local has_http, http = pcall(require, "socket.http")
+local ltn12 = require("ltn12")
 
 local RepoManager = {
     DEFAULT_REPO_URL = "https://raw.githubusercontent.com/Guilhermesscastro/kbreakstore/main/registry/manifest.v2.json",
@@ -21,7 +23,6 @@ local RepoManager = {
     packages = {},
 }
 
--- Resolve absolute directory of this plugin
 function RepoManager:getPluginDir()
     local str = debug.getinfo(1, "S").source:sub(2)
     return str:match("(.*/)") or "/mnt/us/koreader/plugins/kbreakstore.koplugin/"
@@ -32,7 +33,7 @@ function RepoManager:init()
     -- 1. Try local user cache
     local loaded = self:loadCachedManifest()
     -- 2. Fall back to bundled manifest inside plugin directory
-    if not loaded then
+    if not loaded or not self.packages or next(self.packages) == nil then
         self:loadBundledManifest()
     end
 end
@@ -42,12 +43,14 @@ function RepoManager:loadCachedManifest()
     if f then
         local content = f:read("*all")
         f:close()
-        local ok, data = pcall(json.decode, content)
-        if ok and data and data.packages then
-            self.manifest = data
-            self.packages = data.packages
-            logger.info("KindleBreak Store: Loaded manifest from user cache.")
-            return true
+        if content and #content > 0 then
+            local ok, data = pcall(json.decode, content)
+            if ok and data and data.packages and next(data.packages) ~= nil then
+                self.manifest = data
+                self.packages = data.packages
+                logger.info("KindleBreak Store: Loaded manifest from cache with " .. self:getPackageCount() .. " package(s).")
+                return true
+            end
         end
     end
     return false
@@ -59,38 +62,57 @@ function RepoManager:loadBundledManifest()
     if f then
         local content = f:read("*all")
         f:close()
-        local ok, data = pcall(json.decode, content)
-        if ok and data and data.packages then
-            self.manifest = data
-            self.packages = data.packages
-            logger.info("KindleBreak Store: Loaded bundled fallback manifest (" .. bundled_path .. ")")
-            return true
+        if content and #content > 0 then
+            local ok, data = pcall(json.decode, content)
+            if ok and data and data.packages then
+                self.manifest = data
+                self.packages = data.packages
+                logger.info("KindleBreak Store: Loaded bundled fallback manifest with " .. self:getPackageCount() .. " package(s).")
+                return true
+            end
         end
     end
+    logger.warn("KindleBreak Store: Could not load bundled manifest.")
     return false
+end
+
+function RepoManager:getPackageCount()
+    local c = 0
+    if self.packages then
+        for _ in pairs(self.packages) do c = c + 1 end
+    end
+    return c
 end
 
 function RepoManager:fetchManifest(url, callback)
     url = url or self.DEFAULT_REPO_URL
     logger.info("KindleBreak Store: Fetching manifest from: " .. url)
 
+    local body_str = ""
     local response_body = {}
-    socketutil:set_timeout(8, 8)
+    local code = 0
 
-    -- Try via socket.http first
-    local res, code, response_headers = http.request{
-        url = url,
-        sink = ltn12.sink.table(response_body),
-    }
+    socketutil:set_timeout(10, 10)
 
-    local body_str = table.concat(response_body)
+    -- 1. Try ssl.https or socket.http
+    local http_mod = (url:sub(1, 5) == "https" and has_ssl) and https or (has_http and http)
+    if http_mod then
+        local res, c, _ = http_mod.request{
+            url = url,
+            sink = ltn12.sink.table(response_body),
+        }
+        if res and c == 200 then
+            code = 200
+            body_str = table.concat(response_body)
+        end
+    end
 
-    -- Fallback to curl if socket.http failed or returned empty
-    if not res or code ~= 200 or #body_str == 0 then
-        logger.info("KindleBreak Store: socket.http failed, trying curl fallback...")
+    -- 2. Fallback to curl on Kindle
+    if code ~= 200 or #body_str == 0 then
+        logger.info("KindleBreak Store: HTTP module failed/unavailable, executing curl fallback...")
         local tmp_file = "/tmp/kbreak_manifest_fetch.json"
         local ret = os.execute(string.format("curl -sSL -k '%s' -o '%s'", url, tmp_file))
-        if ret == 0 then
+        if ret == 0 or ret == true then
             local f = io.open(tmp_file, "r")
             if f then
                 body_str = f:read("*all")
@@ -102,7 +124,7 @@ function RepoManager:fetchManifest(url, callback)
 
     if code == 200 and #body_str > 0 then
         local ok, data = pcall(json.decode, body_str)
-        if ok and data and data.packages then
+        if ok and data and data.packages and next(data.packages) ~= nil then
             self.manifest = data
             self.packages = data.packages
 
@@ -112,18 +134,20 @@ function RepoManager:fetchManifest(url, callback)
                 f:write(body_str)
                 f:close()
             end
-            logger.info("KindleBreak Store: Manifest successfully updated from remote.")
+            logger.info("KindleBreak Store: Manifest successfully updated with " .. self:getPackageCount() .. " package(s).")
             if callback then callback(true, self.packages) end
             return true
+        else
+            logger.warn("KindleBreak Store: Decoded JSON has no packages or invalid structure.")
         end
     end
 
-    -- If remote failed, make sure we have at least bundled or cached data
-    if not self.manifest then
+    -- If remote fetch failed, preserve existing packages or fallback to bundled
+    if not self.packages or next(self.packages) == nil then
         self:loadBundledManifest()
     end
 
-    logger.warn("KindleBreak Store: Could not reach remote repo. Using cached/bundled manifest.")
+    logger.warn("KindleBreak Store: Failed to fetch remote manifest. Total packages available: " .. self:getPackageCount())
     if callback then callback(false, self.packages) end
     return false
 end
@@ -131,7 +155,6 @@ end
 function RepoManager:getInstalledPackages()
     local installed = {}
 
-    -- Check installed.json
     local f = io.open(self.INSTALLED_FILE, "r")
     if f then
         local content = f:read("*all")
@@ -143,19 +166,21 @@ function RepoManager:getInstalledPackages()
     end
 
     -- Also check existing KOReader plugin folders
-    for pkg_id, pkg in pairs(self.packages) do
-        if pkg.package_type == "koreader_plugin" then
-            local plugin_dir = self.KOREADER_PLUGINS_DIR .. "/" .. pkg_id .. ".koplugin"
-            local meta_file = plugin_dir .. "/_meta.lua"
-            local meta_f = io.open(meta_file, "r")
-            if meta_f then
-                meta_f:close()
-                if not installed[pkg_id] then
-                    installed[pkg_id] = {
-                        version = {1, 0, 0},
-                        installed_at = os.time(),
-                        package_type = "koreader_plugin",
-                    }
+    if self.packages then
+        for pkg_id, pkg in pairs(self.packages) do
+            if pkg.package_type == "koreader_plugin" then
+                local plugin_dir = self.KOREADER_PLUGINS_DIR .. "/" .. pkg_id .. ".koplugin"
+                local meta_file = plugin_dir .. "/_meta.lua"
+                local meta_f = io.open(meta_file, "r")
+                if meta_f then
+                    meta_f:close()
+                    if not installed[pkg_id] then
+                        installed[pkg_id] = {
+                            version = {1, 0, 0},
+                            installed_at = os.time(),
+                            package_type = "koreader_plugin",
+                        }
+                    end
                 end
             end
         end
@@ -164,7 +189,6 @@ function RepoManager:getInstalledPackages()
     return installed
 end
 
--- Compare version array [major, minor, patch]
 function RepoManager:compareVersions(v1, v2)
     if not v1 or not v2 then return 0 end
     for i = 1, 3 do
@@ -177,7 +201,7 @@ function RepoManager:compareVersions(v1, v2)
 end
 
 function RepoManager:getPackageState(pkg_id)
-    local pkg = self.packages[pkg_id]
+    local pkg = self.packages and self.packages[pkg_id]
     if not pkg then return "unknown", nil end
 
     local installed = self:getInstalledPackages()

@@ -16,17 +16,13 @@ This checklist tracks the implementation, testing, and rollout milestones for th
 
 ---
 
-## 🤖 Phase 2: Automated Scraper & GitHub Actions
 - [x] **Release Scraper (`tools/scraper.py`)**:
-  - [x] Queries GitHub Releases API with optional `GITHUB_TOKEN` support.
-  - [x] Matches target architecture assets via glob patterns.
-  - [x] Parses tag versions and updates `manifest.v2.json` cleanly.
-  - [x] Supports `--dry-run` and live sync modes.
+  - [x] Implemented dynamic GitHub topic crawler (`koreader-plugin`, `koreader-user-patch`, `kindle-homebrew`).
+  - [x] Auto-discovered 146+ packages (including AI Assistants like omer-faruq/assistant, koassistant, ProjectTitle, Z-Library, Frotz, Wallabag, Readwise, Games, Tweaks).
+  - [x] Automatic category classification & branch archive fallback generation.
 - [x] **GitHub Actions Workflow (`.github/workflows/update-registry.yml`)**:
-  - [x] Scheduled cron trigger (every 12 hours).
-  - [x] Manual trigger (`workflow_dispatch`).
-  - [x] Auto-commit and push updated manifest.
-- [x] **Milestone 2 Test**: Successfully scraped live KOReader release assets (`kindlehf`, `kindlepw2`, `kindle`).
+  - [x] Scheduled cron trigger (every 12 hours) to keep all 146+ packages continuously updated from GitHub.
+- [x] **Milestone 2 Test**: Successfully built and validated 146-package catalog in `manifest.v2.json`.
 
 ---
 
@@ -59,8 +55,8 @@ This checklist tracks the implementation, testing, and rollout milestones for th
 ---
 
 ## 🚀 Phase 5: Next Steps & Device Deployment (To Do)
-- [ ] **Copy Plugin to Kindle**: Copy `client/kbreakstore.koplugin/` to `/mnt/us/koreader/plugins/`.
+- [x] **Push to GitHub**: Pushed project to `https://github.com/Guilhermesscastro/kbreakstore`.
+- [ ] **Ensure Public Visibility**: Check repo visibility in Settings.
 - [ ] **On-Device UI Test**: Launch KOReader, connect to Wi-Fi, open the store menu, and browse packages.
 - [ ] **Install Test**: Perform a test install of a package directly on-screen.
-- [ ] **Push to GitHub**: Initialize git repository and push to GitHub so GitHub Pages can host the live manifest.
 - [ ] **Seed Additional Packages**: Add more community homebrew and KOReader plugins to `registry/sources.json`.

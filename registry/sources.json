@@ -4,9 +4,9 @@
   "sources": [
     {
       "id": "koreader",
-      "name": "KOReader",
+      "name": "KOReader Document Viewer",
       "author": "KOReader Team",
-      "description": "An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats.",
+      "description": "Powerful e-book and document reader supporting PDF, EPUB, DjVu, CBZ, FB2, and more.",
       "category": "readers",
       "package_type": "system",
       "homepage": "https://koreader.rocks",
@@ -19,10 +19,223 @@
       }
     },
     {
+      "id": "plato",
+      "name": "Plato Reader",
+      "author": "baskerville",
+      "description": "Lightweight, fast, and minimalist document reader for E-Ink devices written in Rust.",
+      "category": "readers",
+      "package_type": "system",
+      "homepage": "https://github.com/baskerville/plato",
+      "github_repo": "baskerville/plato",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "kindlehf": "*plato*.zip",
+        "kindle": "*plato*.zip"
+      }
+    },
+    {
+      "id": "projecttitle",
+      "name": "Project: Title (Library Overhaul)",
+      "author": "ProjectTitle Community",
+      "description": "Next-generation visual library and book cover browser overhaul for KOReader.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/eupn/projecttitle.koplugin"
+    },
+    {
+      "id": "pinlock",
+      "name": "PIN Lock Screen",
+      "author": "KOReader Community",
+      "description": "Adds numeric PIN code security protection whenever your Kindle wakes from sleep.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader-pinlock"
+    },
+    {
+      "id": "dtdisplay",
+      "name": "dtDisplay Fullscreen Clock",
+      "author": "dtDisplay Team",
+      "description": "Clean full-screen and status-bar time, day, and battery percentage widget.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/dtdisplay/dtdisplay.koplugin"
+    },
+    {
+      "id": "audiobookshelf",
+      "name": "Audiobookshelf & TTS Player",
+      "author": "Audiobookshelf Team",
+      "description": "Stream audiobooks, sync listening progress with Audiobookshelf servers, and Text-to-Speech.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/mikiher/audiobook.koplugin"
+    },
+    {
+      "id": "frotz",
+      "name": "Frotz Interactive Fiction (Z-Machine)",
+      "author": "Frotz Community",
+      "description": "Play interactive fiction text adventures (Zork, Hitchhiker's Guide, Inform games) inside KOReader.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/frotz.koplugin"
+    },
+    {
+      "id": "storygraph",
+      "name": "The StoryGraph Sync",
+      "author": "StoryGraph Community",
+      "description": "Automatically update your reading progress and mark books as finished on The StoryGraph.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "hardcover",
+      "name": "Hardcover.app Book Sync",
+      "author": "Hardcover Community",
+      "description": "Sync currently reading books, progress percentages, and ratings with Hardcover.app.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://hardcover.app"
+    },
+    {
+      "id": "omnivore",
+      "name": "Omnivore Read-it-Later",
+      "author": "Omnivore Community",
+      "description": "Download and read your saved Omnivore articles and newsletters offline.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://omnivore.app"
+    },
+    {
+      "id": "remotenote",
+      "name": "RemoteNote (Obsidian & Notion Sync)",
+      "author": "RemoteNote Community",
+      "description": "Export reading notes, highlights, and annotations directly into Obsidian or Notion vaults.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "telegram-sync",
+      "name": "Telegram Highlights Exporter",
+      "author": "Community",
+      "description": "Instantly send your favorite book quotes and reading highlights to your Telegram Saved Messages.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "deepl-translate",
+      "name": "DeepL Neural Translator",
+      "author": "DeepL Community",
+      "description": "High-accuracy AI sentence and paragraph translation powered by DeepL API while reading.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://deepl.com"
+    },
+    {
+      "id": "coverimage",
+      "name": "CoverImage Lockscreen Plugin",
+      "author": "KOReader Team",
+      "description": "Automatically saves and sets the current book's cover art as your Kindle screensaver.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "wallabag",
+      "name": "Wallabag Article Reader",
+      "author": "KOReader Community",
+      "description": "Sync and read saved web articles offline from your self-hosted Wallabag service.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://wallabag.org"
+    },
+    {
+      "id": "readwise",
+      "name": "Readwise Highlights Sync",
+      "author": "KOReader Community",
+      "description": "Automatically sync all your book highlights, notes, and annotations to Readwise.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://readwise.io"
+    },
+    {
+      "id": "calibre-wireless",
+      "name": "Calibre Wireless Companion",
+      "author": "KOReader Team",
+      "description": "Connect to your Calibre library wirelessly to browse, download books, and sync metadata.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://calibre-ebook.com"
+    },
+    {
+      "id": "statistics",
+      "name": "Reading Statistics & Goals",
+      "author": "KOReader Team",
+      "description": "Detailed reading graphs, pages per minute, chapter breakdowns, and reading goal tracker.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://koreader.rocks"
+    },
+    {
+      "id": "weather-clock",
+      "name": "Weather & Status Clock Widget",
+      "author": "KOReader Community",
+      "description": "Displays live local weather forecasts, temperature, and battery telemetry in the top bar.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "wikipedia-offline",
+      "name": "Wikipedia & Dictionary Offline",
+      "author": "KOReader Community",
+      "description": "Instant offline dictionary and encyclopedia lookup while reading books.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://koreader.rocks"
+    },
+    {
+      "id": "anki-export",
+      "name": "Anki Flashcards Exporter",
+      "author": "KOReader Community",
+      "description": "Export highlighted vocabulary words and sentence context into Anki flashcard decks.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://apps.ankiweb.net"
+    },
+    {
+      "id": "goodreads-sync",
+      "name": "Goodreads Reading Tracker",
+      "author": "KOReader Community",
+      "description": "Update your Goodreads reading progress and bookshelves automatically.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://goodreads.com"
+    },
+    {
+      "id": "menu-customizer",
+      "name": "Menu Customizer & Reorder",
+      "author": "KOReader Community",
+      "description": "Reorder, hide, and customize items in KOReader top and bottom menus.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
+      "id": "airplanemode",
+      "name": "Quick Airplane Mode Toggle",
+      "author": "KOReader Community",
+      "description": "One-tap toggle in the top bar to turn Wi-Fi on or off to save battery life.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader"
+    },
+    {
       "id": "kterm",
-      "name": "kTerm",
+      "name": "kTerm Terminal Emulator",
       "author": "NiLuJe / baf",
-      "description": "VT100 terminal emulator for Kindle devices.",
+      "description": "On-device VT100 terminal emulator and shell for Kindle.",
       "category": "utilities",
       "package_type": "system",
       "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920",
@@ -34,24 +247,10 @@
       }
     },
     {
-      "id": "linkss",
-      "name": "ScreenSavers Hack",
-      "author": "NiLuJe",
-      "description": "Custom screensavers hack for jailbroken Kindle devices.",
-      "category": "tweaks",
-      "package_type": "system",
-      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
-      "github_repo": "NiLuJe/kindle-linkss",
-      "release_strategy": "latest",
-      "asset_filters": {
-        "kindlehf": "*kindle-linkss*.tar.xz"
-      }
-    },
-    {
       "id": "fbink",
-      "name": "FBInk",
+      "name": "FBInk Framebuffer Tool",
       "author": "NiLuJe",
-      "description": "E-Ink frame-buffer character, image and rectangle drawing utility.",
+      "description": "High-performance E-Ink framebuffer drawing utility, text renderer, and image viewer.",
       "category": "utilities",
       "package_type": "system",
       "homepage": "https://github.com/NiLuJe/FBInk",
@@ -62,11 +261,182 @@
       }
     },
     {
+      "id": "usbnet",
+      "name": "USBNetwork & SSH Server",
+      "author": "NiLuJe",
+      "description": "Enables USB networking, dropbear SSH server, and SFTP file transfer on your Kindle.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474"
+    },
+    {
+      "id": "python-runtime",
+      "name": "Python 3 Runtime for Kindle",
+      "author": "NiLuJe",
+      "description": "Standalone Python 3 interpreter and standard library compiled for Kindle ARM.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474"
+    },
+    {
+      "id": "tailscale",
+      "name": "Tailscale for Kindle",
+      "author": "Community / Tailscale",
+      "description": "Zero-config mesh VPN client to access your Kindle securely from anywhere over Wi-Fi.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://tailscale.com"
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing Wireless Sync",
+      "author": "Syncthing Community",
+      "description": "Continuous, decentralized file synchronization between your computer and Kindle.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://syncthing.net"
+    },
+    {
+      "id": "vnc-viewer",
+      "name": "Kindle VNC Viewer",
+      "author": "baf / MobileRead",
+      "description": "Turn your Kindle into a secondary E-Ink PC monitor via VNC over Wi-Fi or USB.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=150434"
+    },
+    {
+      "id": "calculator",
+      "name": "Kindle Calculator",
+      "author": "MobileRead Community",
+      "description": "Touch-friendly scientific and standard calculator designed for E-Ink screens.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "linkss",
+      "name": "ScreenSavers Hack (linkss)",
+      "author": "NiLuJe",
+      "description": "Custom screensaver image hack supporting random rotation, last-read covers, and custom folders.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474"
+    },
+    {
+      "id": "linkfonts",
+      "name": "Custom Fonts Hack (linkfonts)",
+      "author": "NiLuJe",
+      "description": "Add any custom TTF/OTF typography fonts system-wide across all Kindle reading interfaces.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474"
+    },
+    {
+      "id": "hotfix",
+      "name": "Jailbreak Survival Hotfix",
+      "author": "NiLuJe",
+      "description": "Protects your jailbreak from being wiped during accidental Amazon OTA firmware updates.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=225030"
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary OTA Blocker",
+      "author": "KindleModding",
+      "description": "Firmware update defense that blocks Amazon OTA update servers and preserves jailbreak state.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://kindlemodding.org"
+    },
+    {
+      "id": "adbreak",
+      "name": "AdBreak Lockscreen Ads Remover",
+      "author": "KindleModding",
+      "description": "Removes lockscreen special offers and sponsored ads on ad-supported Kindle devices.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://github.com/KindleModding/AdBreak"
+    },
+    {
+      "id": "kual",
+      "name": "KUAL (Kindle Unified Application Launcher)",
+      "author": "NiLuJe / MobileRead",
+      "description": "Classic application launcher booklet for running homebrew extensions and scripts.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=203326"
+    },
+    {
+      "id": "chess",
+      "name": "Kindle Chess (GNU Chess)",
+      "author": "MobileRead Community",
+      "description": "Full-featured Chess game with AI difficulty levels optimized for E-Ink touch screens.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920"
+    },
+    {
+      "id": "game-2048",
+      "name": "2048 E-Ink Edition",
+      "author": "MobileRead Community",
+      "description": "The classic addictive sliding tile puzzle game adapted for E-Ink displays.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "sudoku",
+      "name": "Sudoku Master",
+      "author": "MobileRead Community",
+      "description": "Clean, distraction-free Sudoku with thousands of generated puzzles and hint system.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper E-Ink",
+      "author": "MobileRead Community",
+      "description": "Classic retro Minesweeper game with customizable grid sizes and touch controls.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "doom",
+      "name": "Doom (PrBoom for Kindle)",
+      "author": "id Software / MobileRead",
+      "description": "The legendary classic DOOM ported to run natively on Kindle E-Ink hardware.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "solitaire",
+      "name": "Solitaire E-Ink (Klondike)",
+      "author": "MobileRead Community",
+      "description": "Classic Klondike Solitaire card game with smooth high-contrast E-Ink graphics.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris E-Ink Edition",
+      "author": "MobileRead Community",
+      "description": "Classic falling block puzzle game optimized with high-contrast piece rendering for E-Ink.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com"
+    },
+    {
       "id": "kbreakstore",
       "name": "KindleBreak Store",
       "author": "KindleBreak Team",
       "description": "On-device store to discover, install, and update homebrew and KOReader plugins.",
-      "category": "store",
+      "category": "plugins",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Guilhermesscastro/kbreakstore",
       "github_repo": "Guilhermesscastro/kbreakstore",

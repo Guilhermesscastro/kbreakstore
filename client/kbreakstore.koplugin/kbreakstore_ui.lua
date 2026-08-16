@@ -19,9 +19,13 @@ local StoreUI = {
 }
 
 function StoreUI:showStoreMenu(caller_menu)
+    if not RepoManager.packages or next(RepoManager.packages) == nil then
+        RepoManager:init()
+    end
+
     local menu_items = {}
 
-    -- Header Controls: Refresh & Search & Category Switcher
+    -- Header Controls: Search & Sync & Category Switcher
     table.insert(menu_items, {
         text = _("🔍 Search Packages"),
         help_text = self.search_query ~= "" and (_("Active filter: ") .. self.search_query) or _("Filter packages by name or keyword"),
@@ -31,22 +35,23 @@ function StoreUI:showStoreMenu(caller_menu)
     })
 
     table.insert(menu_items, {
-        text = _("🔄 Refresh Online Catalog"),
-        help_text = _("Sync latest releases from GitHub"),
+        text = _("🔄 Sync Online Catalog"),
+        help_text = _("Fetch latest packages from GitHub repository"),
         callback = function(touch_menu)
             UIManager:show(InfoMessage:new{
-                text = _("Refreshing catalog from online repository..."),
+                text = _("Connecting to GitHub repository..."),
                 timeout = 1,
             })
-            RepoManager:fetchManifest(nil, function(success)
+            RepoManager:fetchManifest(nil, function(success, pkgs)
+                local count = RepoManager:getPackageCount()
                 if success then
                     UIManager:show(InfoMessage:new{
-                        text = _("Catalog updated successfully!"),
+                        text = string.format(_("Catalog updated! %d packages available."), count),
                         timeout = 2,
                     })
                 else
                     UIManager:show(InfoMessage:new{
-                        text = _("Could not reach repository. Using cached catalog."),
+                        text = string.format(_("Could not reach remote repo. %d cached packages available."), count),
                         timeout = 3,
                     })
                 end
@@ -55,23 +60,44 @@ function StoreUI:showStoreMenu(caller_menu)
         end,
     })
 
+    local cat_names = {
+        all = _("ALL"),
+        plugins = _("All KOReader Plugins"),
+        ai = _("🤖 AI Assistants & Tools"),
+        dict = _("📖 Translation & Dictionaries"),
+        sync = _("☁️ Sync & Highlights"),
+        library = _("📚 Library & Catalog"),
+        readers = _("👓 Readers & Manga"),
+        games = _("🎮 Games & Interactive Fiction"),
+        utilities = _("🛠 Utilities & Hardware"),
+        tweaks = _("⚡ Tweaks & Hacks"),
+        installed = _("✅ Installed on Device"),
+    }
+    local cat_label = cat_names[self.current_category] or self.current_category:upper()
+
     table.insert(menu_items, {
-        text = _("📂 Filter Category: ") .. self.current_category:upper(),
+        text = _("📂 Category: ") .. cat_label,
+        help_text = _("Tap to filter packages by category"),
         callback = function(touch_menu)
             self:showCategoryPicker(touch_menu)
         end,
-    })
-
-    table.insert(menu_items, {
-        text = "----------------------------------------",
-        enabled = false,
     })
 
     -- Populate package entries
     local packages = RepoManager.packages or {}
     local count = 0
 
+    -- Sort package keys alphabetically by name
+    local sorted_keys = {}
     for pkg_id, pkg in pairs(packages) do
+        table.insert(sorted_keys, { id = pkg_id, name = (pkg.name or pkg_id):lower() })
+    end
+    table.sort(sorted_keys, function(a, b) return a.name < b.name end)
+
+    for _, entry in ipairs(sorted_keys) do
+        local pkg_id = entry.id
+        local pkg = packages[pkg_id]
+
         local matches_category = (self.current_category == "all") or
             (self.current_category == "plugins" and pkg.package_type == "koreader_plugin") or
             (self.current_category == "installed" and RepoManager:getPackageState(pkg_id) ~= "not_installed") or
@@ -82,7 +108,8 @@ function StoreUI:showStoreMenu(caller_menu)
             local q = self.search_query:lower()
             local n = (pkg.name or ""):lower()
             local d = (pkg.description or ""):lower()
-            matches_search = (n:find(q, 1, true) ~= nil) or (d:find(q, 1, true) ~= nil) or (pkg_id:lower():find(q, 1, true) ~= nil)
+            local a = (pkg.author or ""):lower()
+            matches_search = (n:find(q, 1, true) ~= nil) or (d:find(q, 1, true) ~= nil) or (pkg_id:lower():find(q, 1, true) ~= nil) or (a:find(q, 1, true) ~= nil)
         end
 
         if matches_category and matches_search then
@@ -111,13 +138,15 @@ function StoreUI:showStoreMenu(caller_menu)
 
     if count == 0 then
         table.insert(menu_items, {
-            text = _("(No packages found matching criteria)"),
+            text = _("(No packages found in this category)"),
+            help_text = _("Tap 'Category: ALL' above or 'Sync Online Catalog' to refresh."),
             enabled = false,
         })
     end
 
+    local menu_title = string.format(_("KindleBreak Store (%d)"), count)
     local store_menu = Menu:new{
-        title = _("KindleBreak Store"),
+        title = menu_title,
         item_table = menu_items,
         is_borderless = false,
         show_parent = caller_menu,
@@ -128,12 +157,17 @@ end
 
 function StoreUI:showCategoryPicker(parent_menu)
     local categories = {
-        { id = "all", name = _("All Packages") },
-        { id = "plugins", name = _("KOReader Plugins") },
-        { id = "readers", name = _("Readers & Document Viewers") },
-        { id = "utilities", name = _("Utilities & Tools") },
-        { id = "tweaks", name = _("Tweaks & Customization") },
-        { id = "installed", name = _("Installed on this Device") },
+        { id = "all", name = _("All Packages (140+)") },
+        { id = "ai", name = _("🤖 AI Assistants & Language Models") },
+        { id = "plugins", name = _("🔌 KOReader Plugins (All)") },
+        { id = "dict", name = _("📖 Translation, Dictionaries & Anki") },
+        { id = "sync", name = _("☁️ Sync, Notes & Highlights") },
+        { id = "library", name = _("📚 Library, Covers & OPDS") },
+        { id = "readers", name = _("👓 Readers & Manga Viewers") },
+        { id = "games", name = _("🎮 Games, Puzzles & Text Adventures") },
+        { id = "utilities", name = _("🛠 Utilities & Hardware Tools") },
+        { id = "tweaks", name = _("⚡ System Tweaks, Fonts & Hacks") },
+        { id = "installed", name = _("✅ Installed on This Device") },
     }
 
     local items = {}
@@ -199,6 +233,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
     local detail_text = string.format(
         "Package: %s (%s)\n" ..
         "Author: %s\n" ..
+        "Category: %s\n" ..
         "Type: %s\n" ..
         "Latest Version: %s\n" ..
         "Installed Version: %s\n" ..
@@ -206,6 +241,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
         "Description:\n%s",
         pkg.name or pkg_id, pkg_id,
         pkg.author or "Community",
+        pkg.category or "plugins",
         pkg.package_type == "koreader_plugin" and "KOReader Plugin" or "System Homebrew",
         v_remote_str,
         v_local_str,

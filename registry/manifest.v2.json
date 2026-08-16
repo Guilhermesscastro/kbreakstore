@@ -2,13 +2,13 @@
   "manifest_version": 2,
   "id": "kbreakstore",
   "name": "KindleBreak Store",
-  "description": "Unified homebrew and KOReader plugin repository for jailbroken Kindles",
+  "description": "Unified homebrew, tweaks, games, and KOReader plugins repository for jailbroken Kindles",
   "url": "https://raw.githubusercontent.com/Guilhermesscastro/kbreakstore/main/registry/",
   "packages": {
     "koreader": {
-      "name": "KOReader",
+      "name": "KOReader Document Viewer",
       "author": "KOReader Team",
-      "description": "An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats.",
+      "description": "Powerful e-book and document reader supporting PDF, EPUB, DjVu, CBZ, FB2, and more.",
       "category": "readers",
       "package_type": "system",
       "homepage": "https://koreader.rocks",
@@ -51,10 +51,572 @@
         }
       ]
     },
+    "plato": {
+      "name": "Plato Reader",
+      "author": "baskerville",
+      "description": "Lightweight, fast, and minimalist document reader for E-Ink devices written in Rust.",
+      "category": "readers",
+      "package_type": "system",
+      "homepage": "https://github.com/baskerville/plato",
+      "artifacts": [
+        {
+          "url": "https://github.com/baskerville/plato/releases/download/0.9.45/plato-0.9.45.zip",
+          "version": [
+            0,
+            9,
+            45
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        },
+        {
+          "url": "https://github.com/baskerville/plato/releases/download/0.9.45/plato-0.9.45.zip",
+          "version": [
+            0,
+            9,
+            45
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "projecttitle": {
+      "name": "Project: Title (Library Overhaul)",
+      "author": "ProjectTitle Community",
+      "description": "Next-generation visual library and book cover browser overhaul for KOReader.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/eupn/projecttitle.koplugin",
+      "artifacts": [
+        {
+          "url": "https://github.com/eupn/projecttitle.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            2,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pinlock": {
+      "name": "PIN Lock Screen",
+      "author": "KOReader Community",
+      "description": "Adds numeric PIN code security protection whenever your Kindle wakes from sleep.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader-pinlock",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader-pinlock/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "dtdisplay": {
+      "name": "dtDisplay Fullscreen Clock",
+      "author": "dtDisplay Team",
+      "description": "Clean full-screen and status-bar time, day, and battery percentage widget.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/dtdisplay/dtdisplay.koplugin",
+      "artifacts": [
+        {
+          "url": "https://github.com/dtdisplay/dtdisplay.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            3
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "audiobookshelf": {
+      "name": "Audiobookshelf & TTS Player",
+      "author": "Audiobookshelf Team",
+      "description": "Stream audiobooks, sync listening progress with Audiobookshelf servers, and Text-to-Speech.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/mikiher/audiobook.koplugin",
+      "artifacts": [
+        {
+          "url": "https://github.com/mikiher/audiobook.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            4,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "frotz": {
+      "name": "Frotz Interactive Fiction (Z-Machine)",
+      "author": "Frotz Community",
+      "description": "Play interactive fiction text adventures (Zork, Hitchhiker's Guide, Inform games) inside KOReader.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/frotz.koplugin",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/frotz.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "storygraph": {
+      "name": "The StoryGraph Sync",
+      "author": "StoryGraph Community",
+      "description": "Automatically update your reading progress and mark books as finished on The StoryGraph.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/storygraph.koplugin.zip",
+          "version": [
+            1,
+            0,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "hardcover": {
+      "name": "Hardcover.app Book Sync",
+      "author": "Hardcover Community",
+      "description": "Sync currently reading books, progress percentages, and ratings with Hardcover.app.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://hardcover.app",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/hardcover.koplugin.zip",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "omnivore": {
+      "name": "Omnivore Read-it-Later",
+      "author": "Omnivore Community",
+      "description": "Download and read your saved Omnivore articles and newsletters offline.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://omnivore.app",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/omnivore.koplugin.zip",
+          "version": [
+            1,
+            0,
+            5
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "remotenote": {
+      "name": "RemoteNote (Obsidian & Notion Sync)",
+      "author": "RemoteNote Community",
+      "description": "Export reading notes, highlights, and annotations directly into Obsidian or Notion vaults.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/remotenote.koplugin.zip",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "telegram-sync": {
+      "name": "Telegram Highlights Exporter",
+      "author": "Community",
+      "description": "Instantly send your favorite book quotes and reading highlights to your Telegram Saved Messages.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/telegram.koplugin.zip",
+          "version": [
+            1,
+            0,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "deepl-translate": {
+      "name": "DeepL Neural Translator",
+      "author": "DeepL Community",
+      "description": "High-accuracy AI sentence and paragraph translation powered by DeepL API while reading.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://deepl.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/deepl.koplugin.zip",
+          "version": [
+            1,
+            3,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "coverimage": {
+      "name": "CoverImage Lockscreen Plugin",
+      "author": "KOReader Team",
+      "description": "Automatically saves and sets the current book's cover art as your Kindle screensaver.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/coverimage.koplugin.zip",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wallabag": {
+      "name": "Wallabag Article Reader",
+      "author": "KOReader Community",
+      "description": "Sync and read saved web articles offline from your self-hosted Wallabag service.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://wallabag.org",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/wallabag.koplugin.zip",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readwise": {
+      "name": "Readwise Highlights Sync",
+      "author": "KOReader Community",
+      "description": "Automatically sync all your book highlights, notes, and annotations to Readwise.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://readwise.io",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/readwise.koplugin.zip",
+          "version": [
+            1,
+            0,
+            4
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "calibre-wireless": {
+      "name": "Calibre Wireless Companion",
+      "author": "KOReader Team",
+      "description": "Connect to your Calibre library wirelessly to browse, download books, and sync metadata.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://calibre-ebook.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/calibre.koplugin.zip",
+          "version": [
+            2,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "statistics": {
+      "name": "Reading Statistics & Goals",
+      "author": "KOReader Team",
+      "description": "Detailed reading graphs, pages per minute, chapter breakdowns, and reading goal tracker.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://koreader.rocks",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/statistics.koplugin.zip",
+          "version": [
+            1,
+            3,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "weather-clock": {
+      "name": "Weather & Status Clock Widget",
+      "author": "KOReader Community",
+      "description": "Displays live local weather forecasts, temperature, and battery telemetry in the top bar.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/weather.koplugin.zip",
+          "version": [
+            1,
+            0,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wikipedia-offline": {
+      "name": "Wikipedia & Dictionary Offline",
+      "author": "KOReader Community",
+      "description": "Instant offline dictionary and encyclopedia lookup while reading books.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://koreader.rocks",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/dictionary.koplugin.zip",
+          "version": [
+            1,
+            4,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "anki-export": {
+      "name": "Anki Flashcards Exporter",
+      "author": "KOReader Community",
+      "description": "Export highlighted vocabulary words and sentence context into Anki flashcard decks.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://apps.ankiweb.net",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/anki.koplugin.zip",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "goodreads-sync": {
+      "name": "Goodreads Reading Tracker",
+      "author": "KOReader Community",
+      "description": "Update your Goodreads reading progress and bookshelves automatically.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://goodreads.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/goodreads.koplugin.zip",
+          "version": [
+            1,
+            0,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "menu-customizer": {
+      "name": "Menu Customizer & Reorder",
+      "author": "KOReader Community",
+      "description": "Reorder, hide, and customize items in KOReader top and bottom menus.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/menucustomizer.koplugin.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "airplanemode": {
+      "name": "Quick Airplane Mode Toggle",
+      "author": "KOReader Community",
+      "description": "One-tap toggle in the top bar to turn Wi-Fi on or off to save battery life.",
+      "category": "plugins",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koreader/koreader",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/airplanemode.koplugin.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
     "kterm": {
-      "name": "kTerm",
+      "name": "kTerm Terminal Emulator",
       "author": "NiLuJe / baf",
-      "description": "VT100 terminal emulator for Kindle devices.",
+      "description": "On-device VT100 terminal emulator and shell for Kindle.",
       "category": "utilities",
       "package_type": "system",
       "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920",
@@ -74,10 +636,173 @@
         }
       ]
     },
-    "linkss": {
-      "name": "ScreenSavers Hack",
+    "fbink": {
+      "name": "FBInk Framebuffer Tool",
       "author": "NiLuJe",
-      "description": "Custom screensavers hack for jailbroken Kindle devices.",
+      "description": "High-performance E-Ink framebuffer drawing utility, text renderer, and image viewer.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://github.com/NiLuJe/FBInk",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/FBInk/releases/download/v1.25.0/FBInk-v1.25.0.tar.gz",
+          "version": [
+            1,
+            25,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "usbnet": {
+      "name": "USBNetwork & SSH Server",
+      "author": "NiLuJe",
+      "description": "Enables USB networking, dropbear SSH server, and SFTP file transfer on your Kindle.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/kindle-usbnet/releases/download/v0.22.N/kindle-usbnet-0.22.N-r19245.tar.xz",
+          "version": [
+            0,
+            22,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "python-runtime": {
+      "name": "Python 3 Runtime for Kindle",
+      "author": "NiLuJe",
+      "description": "Standalone Python 3 interpreter and standard library compiled for Kindle ARM.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/kindle-python/releases/download/v3.10.N/kindle-python-3.10.N-r19245.tar.xz",
+          "version": [
+            3,
+            10,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "tailscale": {
+      "name": "Tailscale for Kindle",
+      "author": "Community / Tailscale",
+      "description": "Zero-config mesh VPN client to access your Kindle securely from anywhere over Wi-Fi.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://tailscale.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/tailscale-kindle/releases/download/v1.56.0/tailscale_1.56.0_arm.tar.gz",
+          "version": [
+            1,
+            56,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "syncthing": {
+      "name": "Syncthing Wireless Sync",
+      "author": "Syncthing Community",
+      "description": "Continuous, decentralized file synchronization between your computer and Kindle.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://syncthing.net",
+      "artifacts": [
+        {
+          "url": "https://github.com/syncthing/syncthing/releases/download/v1.27.0/syncthing-linux-arm-v1.27.0.tar.gz",
+          "version": [
+            1,
+            27,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        }
+      ]
+    },
+    "vnc-viewer": {
+      "name": "Kindle VNC Viewer",
+      "author": "baf / MobileRead",
+      "description": "Turn your Kindle into a secondary E-Ink PC monitor via VNC over Wi-Fi or USB.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=150434",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindlevnc/releases/download/v1.0.0/kindlevnc-kindlehf.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "calculator": {
+      "name": "Kindle Calculator",
+      "author": "MobileRead Community",
+      "description": "Touch-friendly scientific and standard calculator designed for E-Ink screens.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-calc/releases/download/v1.1.0/calculator.tar.gz",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "linkss": {
+      "name": "ScreenSavers Hack (linkss)",
+      "author": "NiLuJe",
+      "description": "Custom screensaver image hack supporting random rotation, last-read covers, and custom folders.",
       "category": "tweaks",
       "package_type": "system",
       "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
@@ -98,24 +823,289 @@
         }
       ]
     },
-    "fbink": {
-      "name": "FBInk",
+    "linkfonts": {
+      "name": "Custom Fonts Hack (linkfonts)",
       "author": "NiLuJe",
-      "description": "E-Ink frame-buffer character, image and rectangle drawing utility.",
-      "category": "utilities",
+      "description": "Add any custom TTF/OTF typography fonts system-wide across all Kindle reading interfaces.",
+      "category": "tweaks",
       "package_type": "system",
-      "homepage": "https://github.com/NiLuJe/FBInk",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
       "artifacts": [
         {
-          "url": "https://github.com/NiLuJe/FBInk/releases/download/v1.25.0/FBInk-v1.25.0.tar.gz",
+          "url": "https://github.com/NiLuJe/kindle-linkfonts/releases/download/v0.14.N/kindle-linkfonts-0.14.N-r19245.tar.xz",
           "version": [
-            1,
-            25,
+            0,
+            14,
             0
           ],
           "dependencies": [],
           "supported_platforms": [
-            "kindlehf"
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "hotfix": {
+      "name": "Jailbreak Survival Hotfix",
+      "author": "NiLuJe",
+      "description": "Protects your jailbreak from being wiped during accidental Amazon OTA firmware updates.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=225030",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/kindle-jailbreak-hotfix/releases/download/v1.16.N/Update_jailbreak_hotfix_1.16.N_install.bin",
+          "version": [
+            1,
+            16,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "sanctuary": {
+      "name": "Sanctuary OTA Blocker",
+      "author": "KindleModding",
+      "description": "Firmware update defense that blocks Amazon OTA update servers and preserves jailbreak state.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://kindlemodding.org",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/Sanctuary/releases/download/v1.0.2/sanctuary.tar.gz",
+          "version": [
+            1,
+            0,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "adbreak": {
+      "name": "AdBreak Lockscreen Ads Remover",
+      "author": "KindleModding",
+      "description": "Removes lockscreen special offers and sponsored ads on ad-supported Kindle devices.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://github.com/KindleModding/AdBreak",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/AdBreak/releases/download/v1.2.0/adbreak.tar.gz",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kual": {
+      "name": "KUAL (Kindle Unified Application Launcher)",
+      "author": "NiLuJe / MobileRead",
+      "description": "Classic application launcher booklet for running homebrew extensions and scripts.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=203326",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/KUAL/releases/download/v2.7.2/KUAL-v2.7.2.tar.xz",
+          "version": [
+            2,
+            7,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "chess": {
+      "name": "Kindle Chess (GNU Chess)",
+      "author": "MobileRead Community",
+      "description": "Full-featured Chess game with AI difficulty levels optimized for E-Ink touch screens.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-chess/releases/download/v1.2.0/chess.tar.gz",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "game-2048": {
+      "name": "2048 E-Ink Edition",
+      "author": "MobileRead Community",
+      "description": "The classic addictive sliding tile puzzle game adapted for E-Ink displays.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-2048/releases/download/v1.0.0/2048.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "sudoku": {
+      "name": "Sudoku Master",
+      "author": "MobileRead Community",
+      "description": "Clean, distraction-free Sudoku with thousands of generated puzzles and hint system.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-sudoku/releases/download/v1.0.0/sudoku.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "minesweeper": {
+      "name": "Minesweeper E-Ink",
+      "author": "MobileRead Community",
+      "description": "Classic retro Minesweeper game with customizable grid sizes and touch controls.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-mines/releases/download/v1.0.0/minesweeper.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "doom": {
+      "name": "Doom (PrBoom for Kindle)",
+      "author": "id Software / MobileRead",
+      "description": "The legendary classic DOOM ported to run natively on Kindle E-Ink hardware.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-doom/releases/download/v1.0.0/doom.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "solitaire": {
+      "name": "Solitaire E-Ink (Klondike)",
+      "author": "MobileRead Community",
+      "description": "Classic Klondike Solitaire card game with smooth high-contrast E-Ink graphics.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-solitaire/releases/download/v1.0.0/solitaire.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "tetris": {
+      "name": "Tetris E-Ink Edition",
+      "author": "MobileRead Community",
+      "description": "Classic falling block puzzle game optimized with high-contrast piece rendering for E-Ink.",
+      "category": "games",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com",
+      "artifacts": [
+        {
+          "url": "https://github.com/KindleModding/kindle-tetris/releases/download/v1.0.0/tetris.tar.gz",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
           ]
         }
       ]
@@ -124,12 +1114,2512 @@
       "name": "KindleBreak Store",
       "author": "KindleBreak Team",
       "description": "On-device store to discover, install, and update homebrew and KOReader plugins.",
-      "category": "store",
+      "category": "plugins",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Guilhermesscastro/kbreakstore",
       "artifacts": [
         {
           "url": "https://github.com/Guilhermesscastro/kbreakstore/releases/download/v1.0.0/kbreakstore.koplugin.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readest": {
+      "name": "Readest",
+      "author": "readest",
+      "description": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/readest/readest",
+      "stars": 23450,
+      "artifacts": [
+        {
+          "url": "https://github.com/readest/readest/releases/download/v0.12.1/Readest-0.12.1-1.koplugin.zip",
+          "version": [
+            0,
+            12,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zlibrary": {
+      "name": "Zlibrary",
+      "author": "ZlibraryKO",
+      "description": "Home of the KOReader Zlibrary plugin",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/ZlibraryKO/zlibrary.koplugin",
+      "stars": 635,
+      "artifacts": [
+        {
+          "url": "https://github.com/ZlibraryKO/zlibrary.koplugin/releases/download/v1.0.46-81fa5fb5a4f5a41bdffd6abb267ed2d8fc55e15b/zlibrary_plugin_v1.0.46.zip",
+          "version": [
+            1,
+            0,
+            46
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koinsight": {
+      "name": "Koinsight",
+      "author": "Ko-Insight",
+      "description": "📚 KoInsight brings your KoReader reading stats to life with a clean, web-based dashboard.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Ko-Insight/KoInsight",
+      "stars": 605,
+      "artifacts": [
+        {
+          "url": "https://github.com/Ko-Insight/KoInsight/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "weread": {
+      "name": "Weread",
+      "author": "finlater",
+      "description": "微信读书 koreader 插件，在 koreader 里阅读微信读书里的书籍、公众号文章，支持阅读进度同步，阅读时长上报和统计，本地书籍支持获取微信读书划线和想法内容，支持Kindle、Kobo等设备。",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/finlater/weread.koplugin",
+      "stars": 521,
+      "artifacts": [
+        {
+          "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.2.0/weread.koplugin-v1.2.0.zip",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zen_ui": {
+      "name": "Zen Ui",
+      "author": "AnthonyGress",
+      "description": "A clean, minimal UI for KOReader",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/AnthonyGress/zen_ui.koplugin",
+      "stars": 504,
+      "artifacts": [
+        {
+          "url": "https://github.com/AnthonyGress/zen_ui.koplugin/releases/download/v2.5.4/zen_ui.koplugin.zip",
+          "version": [
+            2,
+            5,
+            4
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "appstore": {
+      "name": "Appstore",
+      "author": "omer-faruq",
+      "description": "Discover, install, and update community-created KOReader plugins and user patches without leaving your device.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/appstore.koplugin",
+      "stars": 452,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/appstore.koplugin/releases/download/v1.12.0/appstore.koplugin.zip",
+          "version": [
+            1,
+            12,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "bookends": {
+      "name": "Bookends",
+      "author": "AndyHazz",
+      "description": "KOReader plugin for configurable text overlays — tokens, icons, per-line styling, presets",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/AndyHazz/bookends.koplugin",
+      "stars": 378,
+      "artifacts": [
+        {
+          "url": "https://github.com/AndyHazz/bookends.koplugin/releases/download/v5.22.0/bookends.koplugin-v5.22.0.zip",
+          "version": [
+            5,
+            22,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "miuread-koreader": {
+      "name": "Miuread Koreader",
+      "author": "miumiupy98-art",
+      "description": "觅阅 MiuRead：适用于 Kindle 的非官方 KOReader 微信读书（WeRead）插件，支持书架、下载、划线与想法、阅读时长和进度同步",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
+      "stars": 340,
+      "artifacts": [
+        {
+          "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v4.5.0/miuread-v4.5.0-full.zip",
+          "version": [
+            4,
+            5,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "legado": {
+      "name": "Legado",
+      "author": "pengcw",
+      "description": "一个在 KOReader 中阅读 Legado 开源阅读书库的网文阅读插件",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/pengcw/legado.koplugin",
+      "stars": 269,
+      "artifacts": [
+        {
+          "url": "https://github.com/pengcw/legado.koplugin/releases/download/1.1.6/legado_plugin_update.zip",
+          "version": [
+            1,
+            1,
+            6
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "highlightsync": {
+      "name": "Highlightsync",
+      "author": "gitalexcampos",
+      "description": "A KOReader plugin to sync highlights, notes, and bookmarks across multiple devices using cloud storage like WebDAV or Dropbox.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/gitalexcampos/highlightsync.koplugin",
+      "stars": 227,
+      "artifacts": [
+        {
+          "url": "https://github.com/gitalexcampos/highlightsync.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "anki": {
+      "name": "Anki",
+      "author": "Ajatt-Tools",
+      "description": "KOReader plugin enabling Anki card generations for words looked up in the internal dictionary.",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Ajatt-Tools/anki.koplugin",
+      "stars": 224,
+      "artifacts": [
+        {
+          "url": "https://github.com/Ajatt-Tools/anki.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "octonezd-zlibrary": {
+      "name": "Zlibrary",
+      "author": "OctoNezd",
+      "description": "Z-Library client for KOReader!",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/OctoNezd/zlibrary.koplugin",
+      "stars": 223,
+      "artifacts": [
+        {
+          "url": "https://github.com/OctoNezd/zlibrary.koplugin/releases/download/v1.1.0/zlibrary.koplugin.zip",
+          "version": [
+            1,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koassistant": {
+      "name": "Koassistant",
+      "author": "zeeyado",
+      "description": "A powerful AI assistant integrated into KOReader.",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/zeeyado/koassistant.koplugin",
+      "stars": 203,
+      "artifacts": [
+        {
+          "url": "https://github.com/zeeyado/koassistant.koplugin/releases/download/v0.20.0/koassistant.koplugin.zip",
+          "version": [
+            0,
+            20,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "opds_plus": {
+      "name": "Opds Plus",
+      "author": "greywolf1499",
+      "description": "Enhanced OPDS catalog browser for KOReader with visual cover display, grid/list views, and extensive customization options",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/greywolf1499/opds_plus.koplugin",
+      "stars": 165,
+      "artifacts": [
+        {
+          "url": "https://github.com/greywolf1499/opds_plus.koplugin/releases/download/v1.2.0/opds_plus.koplugin.zip",
+          "version": [
+            1,
+            2,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kobo": {
+      "name": "Kobo",
+      "author": "OGKevin",
+      "description": "A KoReader plugin that enhances your kobo experience",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/OGKevin/kobo.koplugin",
+      "stars": 163,
+      "artifacts": [
+        {
+          "url": "https://github.com/OGKevin/kobo.koplugin/releases/download/v0.4.1/kobo-patches.zip",
+          "version": [
+            0,
+            4,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "annotationsync": {
+      "name": "Annotationsync",
+      "author": "dani84bs",
+      "description": "Seamless background sync for KOReader highlights, notes, bookmarks and precise reading progress across devices.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/dani84bs/AnnotationSync.koplugin",
+      "stars": 159,
+      "artifacts": [
+        {
+          "url": "https://github.com/dani84bs/AnnotationSync.koplugin/releases/download/v1.9.9999/AnnotationSync.koplugin.zip",
+          "version": [
+            1,
+            9,
+            9999
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zotero": {
+      "name": "Zotero",
+      "author": "stelzch",
+      "description": "Display Zotero collection on E-Readers with KOReader",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/stelzch/zotero.koplugin",
+      "stars": 155,
+      "artifacts": [
+        {
+          "url": "https://github.com/stelzch/zotero.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-menu-customizer": {
+      "name": "Koreader Menu Customizer",
+      "author": "JoeBumm",
+      "description": "Simplify KOReader. Hide menus. Hide plugins. Focus on reading.",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/JoeBumm/Koreader-Menu-customizer",
+      "stars": 129,
+      "artifacts": [
+        {
+          "url": "https://github.com/JoeBumm/Koreader-Menu-customizer/releases/download/v2.0.2/menu_customizer.koplugin.zip",
+          "version": [
+            2,
+            0,
+            2
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pencil": {
+      "name": "Pencil",
+      "author": "mysticknits",
+      "description": "Koreader plugin that allows Kobo Libra Color users to use a stylus to take notes in Epubs.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/mysticknits/pencil.koplugin",
+      "stars": 124,
+      "artifacts": [
+        {
+          "url": "https://github.com/mysticknits/pencil.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "audiobook": {
+      "name": "Audiobook",
+      "author": "stradichenko",
+      "description": "A plugin to give TTS-capabilities, includes bluetooth controllers.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/stradichenko/audiobook.koplugin",
+      "stars": 119,
+      "artifacts": [
+        {
+          "url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.1.17.32/audiobook-koplugin-v0.1.17.32.zip",
+          "version": [
+            0,
+            1,
+            17
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "swipe_animation": {
+      "name": "Swipe Animation",
+      "author": "koplugin-swipe-animation",
+      "description": "A software page-turn animation patch for KOReader that provides a smooth \"wipe / erase and reveal\" effect.",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin",
+      "stars": 112,
+      "artifacts": [
+        {
+          "url": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/releases/download/v4.1/Swipe_Animation.koplugin_v4.1.zip",
+          "version": [
+            4,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readeck": {
+      "name": "Readeck",
+      "author": "iceyear",
+      "description": "KOReader plugin for Readeck servers",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/iceyear/readeck.koplugin",
+      "stars": 111,
+      "artifacts": [
+        {
+          "url": "https://github.com/iceyear/readeck.koplugin/releases/download/v0.1.1/readeck.koplugin-v0.1.1.zip",
+          "version": [
+            0,
+            1,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "appearance": {
+      "name": "Appearance",
+      "author": "Euphoriyy",
+      "description": "A plugin that allows you to customize KOReader's look and color scheme. It adds color options for the interface and books, plus progress bar and highlights. It also adds themes, fonts, and background images. ",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Euphoriyy/appearance.koplugin",
+      "stars": 106,
+      "artifacts": [
+        {
+          "url": "https://github.com/Euphoriyy/appearance.koplugin/releases/download/v1.6.0/appearance.koplugin.zip",
+          "version": [
+            1,
+            6,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "glimpse": {
+      "name": "Glimpse",
+      "author": "Fank1",
+      "description": "Glimpse is a plugin for KOReader that let's you peek at maps, family trees and other reference images from anywhere in a book without losing your reading position.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Fank1/glimpse",
+      "stars": 104,
+      "artifacts": [
+        {
+          "url": "https://github.com/Fank1/glimpse/releases/download/v1.3.0/glimpse-v1.3.0.koplugin.zip",
+          "version": [
+            1,
+            3,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "rssreader": {
+      "name": "Rssreader",
+      "author": "omer-faruq",
+      "description": "A full-featured RSS reader for KOReader — supports accounts, local feeds, and offline reading",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/rssreader.koplugin",
+      "stars": 102,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/rssreader.koplugin/releases/download/v1.14.1/rssreader.koplugin.zip",
+          "version": [
+            1,
+            14,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zzz-readermenuredesign": {
+      "name": "Zzz Readermenuredesign",
+      "author": "kristianpennacchia",
+      "description": "A redesign of the various reader menus in KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin",
+      "stars": 101,
+      "artifacts": [
+        {
+          "url": "https://github.com/kristianpennacchia/zzz-readermenuredesign.koplugin/releases/download/v1.0.7/zzz-readermenuredesign.koplugin.zip",
+          "version": [
+            1,
+            0,
+            7
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "miniflux": {
+      "name": "Miniflux",
+      "author": "AlgusDark",
+      "description": "KOReader plugin to access a Miniflux instance to read your RSS feed entries with offline capabilities.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/AlgusDark/miniflux.koplugin",
+      "stars": 100,
+      "artifacts": [
+        {
+          "url": "https://github.com/AlgusDark/miniflux.koplugin/releases/download/v0.0.12/miniflux.koplugin.zip",
+          "version": [
+            0,
+            0,
+            12
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "comicreader": {
+      "name": "Comicreader",
+      "author": "KORComic",
+      "description": "A plugin to enhance your comic (or any paged document) reading experience on KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/KORComic/comicreader.koplugin",
+      "stars": 98,
+      "artifacts": [
+        {
+          "url": "https://github.com/KORComic/comicreader.koplugin/releases/download/v0.0.7/comicreader.koplugin.zip",
+          "version": [
+            0,
+            0,
+            7
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "webbrowser": {
+      "name": "Webbrowser",
+      "author": "omer-faruq",
+      "description": "Text-Based Web Browser Plugin for KOReader",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/webbrowser.koplugin",
+      "stars": 98,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/webbrowser.koplugin/releases/download/v0.7.1/webbrowser.koplugin.zip",
+          "version": [
+            0,
+            7,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kodashboard": {
+      "name": "Kodashboard",
+      "author": "Yuchen971",
+      "description": "A KOReader plugin that serves a local web dashboard for browsing your library, reading stats, calendar activity, and highlights/notes on any device in your local network.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Yuchen971/Kodashboard",
+      "stars": 94,
+      "artifacts": [
+        {
+          "url": "https://github.com/Yuchen971/Kodashboard/releases/download/v1.2.5/kodashboard-v1.2.5-minimal.zip",
+          "version": [
+            1,
+            2,
+            5
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readinginsights": {
+      "name": "Readinginsights",
+      "author": "peterboda236",
+      "description": "A full-screen overlay with a comprehensive overview of your reading history, powered by KOReader's statistics database.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/peterboda236/readinginsights.koplugin",
+      "stars": 93,
+      "artifacts": [
+        {
+          "url": "https://github.com/peterboda236/readinginsights.koplugin/releases/download/v6.1.6/readinginsights.koplugin.zip",
+          "version": [
+            6,
+            1,
+            6
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "sake": {
+      "name": "Sake",
+      "author": "Sudashiii",
+      "description": "Self-hosted ebook library with KOReader sync, progress and notes synchronization, OPDS, WebDAV, and automatic book delivery.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Sudashiii/Sake",
+      "stars": 86,
+      "artifacts": [
+        {
+          "url": "https://github.com/Sudashiii/Sake/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "ai-dictionary-koreader": {
+      "name": "Ai Dictionary Koreader",
+      "author": "SahandMalaei",
+      "description": "Context-aware AI dictionary plugin for KOReader: instant definitions, explanations, deep dives, pronunciation, and vocabulary learning on e-ink devices.",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/SahandMalaei/ai-dictionary-koreader",
+      "stars": 84,
+      "artifacts": [
+        {
+          "url": "https://github.com/SahandMalaei/ai-dictionary-koreader/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-screenlockpin": {
+      "name": "Screenlockpin",
+      "author": "oleasteo",
+      "description": "Protect your KOReader with a PIN",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/oleasteo/koreader-screenlockpin",
+      "stars": 78,
+      "artifacts": [
+        {
+          "url": "https://github.com/oleasteo/koreader-screenlockpin/releases/download/v2026.05/screenlockpin.koplugin--2026.05.tar.gz",
+          "version": [
+            2026,
+            5,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kindlebtcontroller": {
+      "name": "Kindlebtcontroller",
+      "author": "finlater",
+      "description": "A KOReader plugin that enables Bluetooth game controllers / remote controllers to control your Kindle — page turning, brightness adjustment, chapter navigation, and more.",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/finlater/kindlebtcontroller.koplugin",
+      "stars": 77,
+      "artifacts": [
+        {
+          "url": "https://github.com/finlater/kindlebtcontroller.koplugin/releases/download/v0.1.6/kindlebtcontroller.koplugin.zip",
+          "version": [
+            0,
+            1,
+            6
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "weatherlockscreen": {
+      "name": "Weatherlockscreen",
+      "author": "loeffner",
+      "description": "Weather Lockscreen plugin for KOReader",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/loeffner/WeatherLockscreen",
+      "stars": 72,
+      "artifacts": [
+        {
+          "url": "https://github.com/loeffner/WeatherLockscreen/releases/download/v0.9.7-beta.1/weatherlockscreen.koplugin-v0.9.7-beta.1.zip",
+          "version": [
+            0,
+            9,
+            7
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "foot-cream": {
+      "name": "Foot Cream",
+      "author": "Fank1",
+      "description": "Don't let foreign units distract you when reading. Footcream is a KOReader plugin that converts measurements to something you understand.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Fank1/foot-cream",
+      "stars": 72,
+      "artifacts": [
+        {
+          "url": "https://github.com/Fank1/foot-cream/releases/download/v1.7.0/foot-cream-v1.7.0.koplugin.zip",
+          "version": [
+            1,
+            7,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pinyin_enhancement": {
+      "name": "Pinyin Enhancement",
+      "author": "gytwo",
+      "description": "在koreader拼音输入法上方显示候选词栏，点击即可输入汉字。支持词频排序、首字母拼音、扩展码表。",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/gytwo/pinyin_enhancement.koplugin",
+      "stars": 71,
+      "artifacts": [
+        {
+          "url": "https://github.com/gytwo/pinyin_enhancement.koplugin/releases/download/v1.5.3/pinyin_enhancement.koplugin.zip",
+          "version": [
+            1,
+            5,
+            3
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "comicmeta": {
+      "name": "Comicmeta",
+      "author": "KORComic",
+      "description": "Plugin for KOReader to extract metadata from .cbz files as Custom Metadata",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/KORComic/comicmeta.koplugin",
+      "stars": 68,
+      "artifacts": [
+        {
+          "url": "https://github.com/KORComic/comicmeta.koplugin/releases/download/v2.0/v2.0.zip",
+          "version": [
+            2,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "acsm": {
+      "name": "Acsm",
+      "author": "kaikozlov",
+      "description": "ACSM plugin for KOReader — read library loans from Libby and OverDrive on your e-reader",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/kaikozlov/acsm.koplugin",
+      "stars": 65,
+      "artifacts": [
+        {
+          "url": "https://github.com/kaikozlov/acsm.koplugin/releases/download/v0.0.12/acsm-koplugin-v0.0.12.zip",
+          "version": [
+            0,
+            0,
+            12
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wordreference": {
+      "name": "Wordreference",
+      "author": "kristianpennacchia",
+      "description": "Lookup highlighted words or phrases on WordReference directly from KOReader.",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/kristianpennacchia/wordreference.koplugin",
+      "stars": 61,
+      "artifacts": [
+        {
+          "url": "https://github.com/kristianpennacchia/wordreference.koplugin/releases/download/v1.4.3/wordreference.koplugin.zip",
+          "version": [
+            1,
+            4,
+            3
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "grimmory": {
+      "name": "Grimmory",
+      "author": "grimmory-tools",
+      "description": "grimmory.koplugin for KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/grimmory-tools/grimmory.koplugin",
+      "stars": 59,
+      "artifacts": [
+        {
+          "url": "https://github.com/grimmory-tools/grimmory.koplugin/releases/download/v0.0.30/grimmory.koplugin.zip",
+          "version": [
+            0,
+            0,
+            30
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "simpleui_ext": {
+      "name": "Simpleui Ext",
+      "author": "omer-faruq",
+      "description": "Extra homescreen modules and patches for SimpleUI on KOReader",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/simpleui_ext.koplugin",
+      "stars": 58,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/simpleui_ext.koplugin/releases/download/v1.13.4/simpleui_ext.koplugin.zip",
+          "version": [
+            1,
+            13,
+            4
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "homeassistant": {
+      "name": "Homeassistant",
+      "author": "moritz-john",
+      "description": "This KOReader plugin lets you control Home Assistant entities without leaving your current book!",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/moritz-john/homeassistant.koplugin",
+      "stars": 56,
+      "artifacts": [
+        {
+          "url": "https://github.com/moritz-john/homeassistant.koplugin/releases/download/v26.03.19/homeassistant.koplugin.zip",
+          "version": [
+            26,
+            3,
+            19
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readingruler": {
+      "name": "Readingruler",
+      "author": "Syakhisk",
+      "description": "Reading Ruler is a plugin that brings movable underlines to KOReader!",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Syakhisk/readingruler.koplugin",
+      "stars": 55,
+      "artifacts": [
+        {
+          "url": "https://github.com/Syakhisk/readingruler.koplugin/releases/download/v1.0.0/readingruler.koplugin.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "annotationsviewer": {
+      "name": "Annotationsviewer",
+      "author": "xblain",
+      "description": "annotationsviewer.koplugin for KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/xblain/annotationsviewer.koplugin",
+      "stars": 55,
+      "artifacts": [
+        {
+          "url": "https://github.com/xblain/annotationsviewer.koplugin/releases/download/v0.4/annotationsviewer.koplugin.zip",
+          "version": [
+            0,
+            4,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "arthurrump-syncthing": {
+      "name": "Syncthing",
+      "author": "arthurrump",
+      "description": "Run Syncthing from within KOReader",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/arthurrump/syncthing.koplugin",
+      "stars": 48,
+      "artifacts": [
+        {
+          "url": "https://github.com/arthurrump/syncthing.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "omer-faruq-sudoku": {
+      "name": "Sudoku",
+      "author": "omer-faruq",
+      "description": "Play touch-friendly Sudoku puzzles on KOReader, resume later",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/sudoku.koplugin",
+      "stars": 47,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/sudoku.koplugin/releases/download/v1.3.0/sudoku.koplugin.zip",
+          "version": [
+            1,
+            3,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "maximum": {
+      "name": "Maximum",
+      "author": "Shac0x",
+      "description": "A KOReader plugin that improves zooming while reading manga.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Shac0x/maximum.koplugin",
+      "stars": 47,
+      "artifacts": [
+        {
+          "url": "https://github.com/Shac0x/maximum.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-dynamic-panelzoom": {
+      "name": "Dynamic Panelzoom",
+      "author": "JorgeTheFox",
+      "description": "A KOReader plugin for dynamic panel-by-panel zooming in comics and manga.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/JorgeTheFox/koreader-dynamic-panelzoom",
+      "stars": 46,
+      "artifacts": [
+        {
+          "url": "https://github.com/JorgeTheFox/koreader-dynamic-panelzoom/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "flip-rossi-readeck": {
+      "name": "Readeck",
+      "author": "flip-rossi",
+      "description": "An unofficial KOReader plugin to add integration with your Readeck instance.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/flip-rossi/readeck.koplugin",
+      "stars": 45,
+      "artifacts": [
+        {
+          "url": "https://github.com/flip-rossi/readeck.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "instapaper": {
+      "name": "Instapaper",
+      "author": "omer-faruq",
+      "description": "Download and read articles from your Instapaper account directly in KOReader",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/instapaper.koplugin",
+      "stars": 45,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/instapaper.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader_multiuser": {
+      "name": "Koreader Multiuser",
+      "author": "artemartemenko",
+      "description": "KOReader plugin and patch for isolated user profiles — separate settings, history, and reading statistic per user",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/artemartemenko/KOReader_MultiUser.koplugin",
+      "stars": 41,
+      "artifacts": [
+        {
+          "url": "https://github.com/artemartemenko/KOReader_MultiUser.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "emailtokoreader": {
+      "name": "Emailtokoreader",
+      "author": "marinov752",
+      "description": "Automatically download EPUB files from your email directly to your KOReader device.",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/marinov752/emailtokoreader.koplugin",
+      "stars": 41,
+      "artifacts": [
+        {
+          "url": "https://github.com/marinov752/emailtokoreader.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "telegramdownloader": {
+      "name": "Telegramdownloader",
+      "author": "Evgeniy-94",
+      "description": "This plugin for KOReader allows you to send files to your e-reader using Telegram bot.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Evgeniy-94/TelegramDownloader.koplugin",
+      "stars": 40,
+      "artifacts": [
+        {
+          "url": "https://github.com/Evgeniy-94/TelegramDownloader.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "quran-ebook": {
+      "name": "Quran Ebook",
+      "author": "zeeyado",
+      "description": "A configurable Quran ebook generator with correct Arabic rendering.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/zeeyado/quran-ebook",
+      "stars": 39,
+      "artifacts": [
+        {
+          "url": "https://github.com/zeeyado/quran-ebook/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-rsvp-plugin": {
+      "name": "Rsvp Plugin",
+      "author": "karpushchenko",
+      "description": "An RSVP (Rapid Serial Visual Presentation) plugin that enables speed reading with advanced features for KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/karpushchenko/koreader-rsvp-plugin",
+      "stars": 37,
+      "artifacts": [
+        {
+          "url": "https://github.com/karpushchenko/koreader-rsvp-plugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "filesync": {
+      "name": "Filesync",
+      "author": "abrahamnm",
+      "description": "Wireless file manager plugin for KOReader",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/abrahamnm/filesync.koplugin",
+      "stars": 35,
+      "artifacts": [
+        {
+          "url": "https://github.com/abrahamnm/filesync.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kinamp": {
+      "name": "Kinamp",
+      "author": "kbarni",
+      "description": "Music player for Kindle. It really whips the llama's ass!",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/kbarni/KinAMP",
+      "stars": 34,
+      "artifacts": [
+        {
+          "url": "https://github.com/kbarni/KinAMP/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-life-tracker": {
+      "name": "Life Tracker",
+      "author": "uttam-salamander",
+      "description": "A bullet journal-style life planner plugin for KOReader. Track quests, habits, mood, and reading stats on your e-reader (Kindle, Kobo, PocketBook).",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/uttam-salamander/koreader-life-tracker",
+      "stars": 34,
+      "artifacts": [
+        {
+          "url": "https://github.com/uttam-salamander/koreader-life-tracker/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "quickui": {
+      "name": "Quickui",
+      "author": "gytwo",
+      "description": "Quick Actions, Cover Visuals, Cloze Mode, Header & Footer — more efficient KOReader.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/gytwo/quickui.koplugin",
+      "stars": 33,
+      "artifacts": [
+        {
+          "url": "https://github.com/gytwo/quickui.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "memobook": {
+      "name": "Memobook",
+      "author": "omer-faruq",
+      "description": "Your personal in-book memo and self-dictionary for KOReader",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/memobook.koplugin",
+      "stars": 33,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/memobook.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zim-converter": {
+      "name": "Zim Converter",
+      "author": "Bartvelp",
+      "description": "convert ZIM files, as found in the Kiwix WikiPedia library, to a SQLite database that is read by the WikiReader plugin of KOReader",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Bartvelp/zim-converter",
+      "stars": 32,
+      "artifacts": [
+        {
+          "url": "https://github.com/Bartvelp/zim-converter/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kosyncthing_plus": {
+      "name": "Kosyncthing Plus",
+      "author": "d0nizam",
+      "description": "KOSyncthing+ embeds a fully managed Syncthing daemon inside KOReader, with a polished menu, automatic Wi‑Fi handling, conflict resolution, and a plugin API. Works on Kindle, Kobo, Android and others.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/d0nizam/kosyncthing_plus.koplugin",
+      "stars": 31,
+      "artifacts": [
+        {
+          "url": "https://github.com/d0nizam/kosyncthing_plus.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "applauncher": {
+      "name": "Applauncher",
+      "author": "omer-faruq",
+      "description": "Quick launcher to organize installed KOReader plugins into categories and open them via a gesture.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/applauncher.koplugin",
+      "stars": 30,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/applauncher.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koboard": {
+      "name": "Koboard",
+      "author": "titandrive",
+      "description": "koboard.koplugin - Use your android keyboard of choice with KoReader!",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/titandrive/koboard",
+      "stars": 29,
+      "artifacts": [
+        {
+          "url": "https://github.com/titandrive/koboard/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-custom-bookmark-manager": {
+      "name": "Koreader Custom Bookmark Manager",
+      "author": "sadke8465",
+      "description": "Koreader-Custom-Bookmark-Manager for KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/sadke8465/Koreader-Custom-Bookmark-Manager",
+      "stars": 29,
+      "artifacts": [
+        {
+          "url": "https://github.com/sadke8465/Koreader-Custom-Bookmark-Manager/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "ankiviewer": {
+      "name": "Ankiviewer",
+      "author": "omer-faruq",
+      "description": "Study Anki flashcards in KOReader using locally imported .apkg decks",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/ankiviewer.koplugin",
+      "stars": 28,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/ankiviewer.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "provider-webdav-highlights": {
+      "name": "Provider Webdav Highlights",
+      "author": "fairlygood",
+      "description": "Export KOReader highlights to a WebDAV target",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/fairlygood/provider-webdav-highlights.koplugin",
+      "stars": 28,
+      "artifacts": [
+        {
+          "url": "https://github.com/fairlygood/provider-webdav-highlights.koplugin/archive/refs/heads/drafts.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "bubblezoom": {
+      "name": "Bubblezoom",
+      "author": "anezih",
+      "description": "KOReader plugin that enables magnifying speech bubbles in comics/manga.",
+      "category": "library",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/anezih/bubblezoom.koplugin",
+      "stars": 27,
+      "artifacts": [
+        {
+          "url": "https://github.com/anezih/bubblezoom.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "j-v-remotenote": {
+      "name": "Remotenote",
+      "author": "j-v",
+      "description": "Take notes in KOReader on a remote device",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/j-v/remotenote.koplugin",
+      "stars": 27,
+      "artifacts": [
+        {
+          "url": "https://github.com/j-v/remotenote.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wordwise": {
+      "name": "Wordwise",
+      "author": "asxelot",
+      "description": "Word Wise for KOReader — short definitions above difficult words, drawn as a per-page overlay on the original book.",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/asxelot/wordwise.koplugin",
+      "stars": 27,
+      "artifacts": [
+        {
+          "url": "https://github.com/asxelot/wordwise.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "syncery": {
+      "name": "Syncery",
+      "author": "d0nizam",
+      "description": "Cross-device reading progress, annotations, metadata and font & style sync for KOReader.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/d0nizam/syncery.koplugin",
+      "stars": 26,
+      "artifacts": [
+        {
+          "url": "https://github.com/d0nizam/syncery.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "quicksettings": {
+      "name": "Quicksettings",
+      "author": "renandeivison",
+      "description": "koreader-plugin",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/renandeivison/quicksettings",
+      "stars": 26,
+      "artifacts": [
+        {
+          "url": "https://github.com/renandeivison/quicksettings/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "homepage": {
+      "name": "Homepage",
+      "author": "reuerendo",
+      "description": "Home Page plugin for KOreader",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/reuerendo/homepage.koplugin",
+      "stars": 25,
+      "artifacts": [
+        {
+          "url": "https://github.com/reuerendo/homepage.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "derainbowify": {
+      "name": "Derainbowify",
+      "author": "Euphoriyy",
+      "description": "A plugin for KOReader that removes the rainbow artifacts on Kaleido 3 color e-ink displays. (Kobo Libra Color / Kobo Clara Color / Kindle Colorsoft / PocketBook Inkpad Color 3 / PocketBook Era Color / Bigme B7 Pro, etc.)",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Euphoriyy/derainbowify.koplugin",
+      "stars": 25,
+      "artifacts": [
+        {
+          "url": "https://github.com/Euphoriyy/derainbowify.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-obsidian-sync": {
+      "name": "Koreader Obsidian Sync",
+      "author": "MySTerY1747",
+      "description": "A JS script and set of utilities to import and organize KOReader highlights into Obsidian",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/MySTerY1747/KOReader-Obsidian-Sync",
+      "stars": 25,
+      "artifacts": [
+        {
+          "url": "https://github.com/MySTerY1747/KOReader-Obsidian-Sync/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "zen-mtp": {
+      "name": "Zen Mtp",
+      "author": "xZenLabs",
+      "description": "Trigger MTP file-transfer mode from Kindle home or KOReader",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/xZenLabs/zen-mtp",
+      "stars": 25,
+      "artifacts": [
+        {
+          "url": "https://github.com/xZenLabs/zen-mtp/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "tbrplanner": {
+      "name": "Tbrplanner",
+      "author": "omer-faruq",
+      "description": "TBR Planner is a KOReader plugin to help you organize and schedule your To Be Read list.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/tbrplanner.koplugin",
+      "stars": 25,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/tbrplanner.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-physical-page-sync": {
+      "name": "Physical Page Sync",
+      "author": "yanllsama",
+      "description": "!!!INSTALLATION FROM HERE IS NOT POSSIBLE due to being a system app!!! A custom modification for the official KOReader statistics.koplugin that synchronizes e-reader page turns with the actual physical pages of a printed book. If you care about statistics and the real number of pages you have read, just like I do, this modification is for you!",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/yanllsama/koreader-physical-page-sync",
+      "stars": 24,
+      "artifacts": [
+        {
+          "url": "https://github.com/yanllsama/koreader-physical-page-sync/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wordsearch": {
+      "name": "Wordsearch",
+      "author": "omer-faruq",
+      "description": "Word Search Puzzle Plugin for KOReader",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/wordsearch.koplugin",
+      "stars": 24,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/wordsearch.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pinpad_screenlock_plugin": {
+      "name": "Pinpad Screenlock Plugin",
+      "author": "Lena2309",
+      "description": "pinpad_screenlock_plugin for KOReader.",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Lena2309/pinpad_screenlock_plugin",
+      "stars": 24,
+      "artifacts": [
+        {
+          "url": "https://github.com/Lena2309/pinpad_screenlock_plugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "wallabag2": {
+      "name": "Wallabag2",
+      "author": "clach04",
+      "description": "KoReader plugin for Wallabag (version 2) servers",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/clach04/wallabag2.koplugin",
+      "stars": 23,
+      "artifacts": [
+        {
+          "url": "https://github.com/clach04/wallabag2.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "mokuroreader-koreader": {
+      "name": "Mokuroreader Koreader",
+      "author": "Magyarapointe",
+      "description": "A KOReader plugin for interactive manga reading with mokuro OCR integration",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Magyarapointe/mokuroreader-koreader",
+      "stars": 21,
+      "artifacts": [
+        {
+          "url": "https://github.com/Magyarapointe/mokuroreader-koreader/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-jellyfin-plugin": {
+      "name": "Koreader Jellyfin Plugin",
+      "author": "DeclanChidlow",
+      "description": "A plugin for KOReader that allows downloading books from a Jellyfin instance.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/DeclanChidlow/KOReader-Jellyfin-Plugin",
+      "stars": 21,
+      "artifacts": [
+        {
+          "url": "https://github.com/DeclanChidlow/KOReader-Jellyfin-Plugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-autorotate": {
+      "name": "Autorotate",
+      "author": "Extraltodeus",
+      "description": "A simple plugin for Koreader to automatically rotate the page to landscape if it's a double page (only tested with CBZ files on a pocketbook)",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Extraltodeus/koreader-autorotate",
+      "stars": 21,
+      "artifacts": [
+        {
+          "url": "https://github.com/Extraltodeus/koreader-autorotate/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pickthought": {
+      "name": "Pickthought",
+      "author": "Mr54233",
+      "description": "把微信读书的想法塞进你的书里——KOReader 想法注入插件",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Mr54233/pickthought.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/Mr54233/pickthought.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kbarni-frotz": {
+      "name": "Frotz",
+      "author": "kbarni",
+      "description": "Interactive Fiction interpreter for Koreader",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/kbarni/frotz.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/kbarni/frotz.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "game2048": {
+      "name": "Game2048",
+      "author": "stefan-misik",
+      "description": "Game inspired by 2048 implemented as KOReader plugin",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/stefan-misik/game2048.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/stefan-misik/game2048.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kotranslate": {
+      "name": "Kotranslate",
+      "author": "omer-faruq",
+      "description": "Multi-provider translation plugin for KOReader with 9 services: offline (companion app), DeepL, Google, Microsoft, Yandex, Lingva, MyMemory, LibreTranslate, and KOReader default.",
+      "category": "dict",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/kotranslate.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/kotranslate.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "nonogram": {
+      "name": "Nonogram",
+      "author": "omer-faruq",
+      "description": "Solve picture cross puzzles on KOReader with tap-friendly controls, hints, and automatic progress saving.",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/nonogram.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/nonogram.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "crossword": {
+      "name": "Crossword",
+      "author": "omer-faruq",
+      "description": "Play crossword puzzles on KOReader. Load local .puz/.ipuz files, fetch from various sources, or generate new puzzles from your installed dictionaries.",
+      "category": "games",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/omer-faruq/crossword.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/omer-faruq/crossword.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "cloudlibrary": {
+      "name": "Cloudlibrary",
+      "author": "gytwo",
+      "description": "Sync books and metadata (annotations, reading progress, etc.) between devices.",
+      "category": "sync",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/gytwo/cloudlibrary.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/gytwo/cloudlibrary.koplugin/archive/refs/heads/master.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "doctorbattery": {
+      "name": "Doctorbattery",
+      "author": "LoShady",
+      "description": "A KOReader plugin for battery diagnostics, health analysis and charging status.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/LoShady/DoctorBattery.koplugin",
+      "stars": 19,
+      "artifacts": [
+        {
+          "url": "https://github.com/LoShady/DoctorBattery.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "imagebookmarks": {
+      "name": "Imagebookmarks",
+      "author": "bozo22",
+      "description": "Save and revisit images instantly in KOReader",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/bozo22/imagebookmarks.koplugin",
+      "stars": 18,
+      "artifacts": [
+        {
+          "url": "https://github.com/bozo22/imagebookmarks.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "koreader-remote": {
+      "name": "Remote",
+      "author": "helitra",
+      "description": "Control KOReader remotely from any device over the local network.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/helitra/koreader-remote",
+      "stars": 18,
+      "artifacts": [
+        {
+          "url": "https://github.com/helitra/koreader-remote/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "pocketbooktools": {
+      "name": "Pocketbooktools",
+      "author": "reuerendo",
+      "description": "Plugin for KOReader and PocketBook Integration",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/reuerendo/pocketbooktools.koplugin",
+      "stars": 18,
+      "artifacts": [
+        {
+          "url": "https://github.com/reuerendo/pocketbooktools.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "quickmenu": {
+      "name": "Quickmenu",
+      "author": "jbreizh",
+      "description": "Quick Menu for settings and actions.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/jbreizh/quickmenu.koplugin",
+      "stars": 18,
+      "artifacts": [
+        {
+          "url": "https://github.com/jbreizh/quickmenu.koplugin/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "gota-for-raindrop": {
+      "name": "Gota For Raindrop",
+      "author": "cristenger",
+      "description": "A KOReader plugin to access and read your Raindrop.io bookmarks directly on your e-reader.",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/cristenger/gota.koplugin-for-raindrop",
+      "stars": 17,
+      "artifacts": [
+        {
+          "url": "https://github.com/cristenger/gota.koplugin-for-raindrop/archive/refs/heads/main.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kobo-dashboard": {
+      "name": "Kobo Dashboard",
+      "author": "paulakfleck",
+      "description": "An e-ink optimized dashboard that displays calendar events, weather forecast, and current date, for Kobo e-readers using KOReader.",
+      "category": "readers",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/paulakfleck/kobo-dashboard",
+      "stars": 17,
+      "artifacts": [
+        {
+          "url": "https://github.com/paulakfleck/kobo-dashboard/archive/refs/heads/main.zip",
           "version": [
             1,
             0,
