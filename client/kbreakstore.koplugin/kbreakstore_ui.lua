@@ -260,13 +260,15 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
         pkg.description or ""
     )
 
-    local buttons = {}
+    local tv
+    local buttons_table = {}
     local action_row = {}
 
     if state == "not_installed" then
         table.insert(action_row, {
             text = _("⬇ Install"),
             callback = function()
+                if tv then UIManager:close(tv) end
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
                     self:showStoreMenu()
@@ -277,6 +279,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
         table.insert(action_row, {
             text = _("⬆ Update to v") .. v_remote_str,
             callback = function()
+                if tv then UIManager:close(tv) end
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
                     self:showStoreMenu()
@@ -287,6 +290,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
         table.insert(action_row, {
             text = _("🔄 Reinstall"),
             callback = function()
+                if tv then UIManager:close(tv) end
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
                     self:showStoreMenu()
@@ -303,6 +307,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
                     text = _("Are you sure you want to uninstall ") .. (pkg.name or pkg_id) .. "?",
                     ok_text = _("Uninstall"),
                     ok_callback = function()
+                        if tv then UIManager:close(tv) end
                         Installer:uninstallPackage(pkg_id, pkg, function(success, msg)
                             UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
                             self:showStoreMenu()
@@ -315,14 +320,17 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
 
     table.insert(action_row, {
         text = _("Close"),
+        callback = function()
+            if tv then UIManager:close(tv) end
+        end,
     })
 
-    table.insert(buttons, action_row)
+    table.insert(buttons_table, action_row)
 
-    local tv = TextViewer:new{
+    tv = TextViewer:new{
         title = pkg.name or pkg_id,
         text = detail_text,
-        buttons = buttons,
+        buttons_table = buttons_table,
     }
     UIManager:show(tv)
 end
