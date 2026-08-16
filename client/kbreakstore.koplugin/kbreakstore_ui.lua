@@ -16,11 +16,18 @@ local Installer = require("kbreakstore_installer")
 local StoreUI = {
     current_category = "all",
     search_query = "",
+    active_menu = nil,
 }
 
-function StoreUI:showStoreMenu(caller_menu)
+function StoreUI:showStoreMenu()
     if not RepoManager.packages or next(RepoManager.packages) == nil then
         RepoManager:init()
+    end
+
+    -- Close any existing open store menu to prevent stacked dialogs
+    if self.active_menu then
+        UIManager:close(self.active_menu)
+        self.active_menu = nil
     end
 
     local menu_items = {}
@@ -29,15 +36,15 @@ function StoreUI:showStoreMenu(caller_menu)
     table.insert(menu_items, {
         text = _("🔍 Search Packages"),
         help_text = self.search_query ~= "" and (_("Active filter: ") .. self.search_query) or _("Filter packages by name or keyword"),
-        callback = function(touch_menu)
-            self:showSearchDialog(touch_menu)
+        callback = function()
+            self:showSearchDialog()
         end,
     })
 
     table.insert(menu_items, {
         text = _("🔄 Sync Online Catalog"),
         help_text = _("Fetch latest packages from GitHub repository"),
-        callback = function(touch_menu)
+        callback = function()
             UIManager:show(InfoMessage:new{
                 text = _("Connecting to GitHub repository..."),
                 timeout = 1,
@@ -55,20 +62,20 @@ function StoreUI:showStoreMenu(caller_menu)
                         timeout = 3,
                     })
                 end
-                self:showStoreMenu(caller_menu)
+                self:showStoreMenu()
             end)
         end,
     })
 
     local cat_names = {
-        all = _("ALL"),
+        all = _("ALL (140+)"),
         plugins = _("All KOReader Plugins"),
         ai = _("🤖 AI Assistants & Tools"),
         dict = _("📖 Translation & Dictionaries"),
         sync = _("☁️ Sync & Highlights"),
         library = _("📚 Library & Catalog"),
         readers = _("👓 Readers & Manga"),
-        games = _("🎮 Games & Interactive Fiction"),
+        games = _("🎮 Games & Puzzles"),
         utilities = _("🛠 Utilities & Hardware"),
         tweaks = _("⚡ Tweaks & Hacks"),
         installed = _("✅ Installed on Device"),
@@ -78,8 +85,8 @@ function StoreUI:showStoreMenu(caller_menu)
     table.insert(menu_items, {
         text = _("📂 Category: ") .. cat_label,
         help_text = _("Tap to filter packages by category"),
-        callback = function(touch_menu)
-            self:showCategoryPicker(touch_menu)
+        callback = function()
+            self:showCategoryPicker()
         end,
     })
 
@@ -117,7 +124,7 @@ function StoreUI:showStoreMenu(caller_menu)
             local state, local_v, remote_v = RepoManager:getPackageState(pkg_id)
             local badge = ""
             if state == "update_available" then
-                badge = " [UPDATE AVAILABLE]"
+                badge = " [UPDATE]"
             elseif state == "installed" then
                 badge = " [INSTALLED]"
             end
@@ -139,7 +146,7 @@ function StoreUI:showStoreMenu(caller_menu)
     if count == 0 then
         table.insert(menu_items, {
             text = _("(No packages found in this category)"),
-            help_text = _("Tap 'Category: ALL' above or 'Sync Online Catalog' to refresh."),
+            help_text = _("Tap 'Category' above or 'Sync Online Catalog' to refresh."),
             enabled = false,
         })
     end
@@ -149,13 +156,16 @@ function StoreUI:showStoreMenu(caller_menu)
         title = menu_title,
         item_table = menu_items,
         is_borderless = false,
-        show_parent = caller_menu,
+        on_close = function()
+            self.active_menu = nil
+        end,
     }
 
+    self.active_menu = store_menu
     UIManager:show(store_menu)
 end
 
-function StoreUI:showCategoryPicker(parent_menu)
+function StoreUI:showCategoryPicker()
     local categories = {
         { id = "all", name = _("All Packages (140+)") },
         { id = "ai", name = _("🤖 AI Assistants & Language Models") },
@@ -164,7 +174,7 @@ function StoreUI:showCategoryPicker(parent_menu)
         { id = "sync", name = _("☁️ Sync, Notes & Highlights") },
         { id = "library", name = _("📚 Library, Covers & OPDS") },
         { id = "readers", name = _("👓 Readers & Manga Viewers") },
-        { id = "games", name = _("🎮 Games, Puzzles & Text Adventures") },
+        { id = "games", name = _("🎮 Games & Puzzles") },
         { id = "utilities", name = _("🛠 Utilities & Hardware Tools") },
         { id = "tweaks", name = _("⚡ System Tweaks, Fonts & Hacks") },
         { id = "installed", name = _("✅ Installed on This Device") },
@@ -177,18 +187,19 @@ function StoreUI:showCategoryPicker(parent_menu)
             checked = (self.current_category == cat.id),
             callback = function()
                 self.current_category = cat.id
-                self:showStoreMenu(parent_menu)
+                self:showStoreMenu()
             end,
         })
     end
 
-    UIManager:show(Menu:new{
+    local cat_menu = Menu:new{
         title = _("Select Category"),
         item_table = items,
-    })
+    }
+    UIManager:show(cat_menu)
 end
 
-function StoreUI:showSearchDialog(parent_menu)
+function StoreUI:showSearchDialog()
     local input_dlg
     input_dlg = InputDialog:new{
         title = _("Search Packages"),
@@ -200,7 +211,7 @@ function StoreUI:showSearchDialog(parent_menu)
                     callback = function()
                         self.search_query = ""
                         UIManager:close(input_dlg)
-                        self:showStoreMenu(parent_menu)
+                        self:showStoreMenu()
                     end,
                 },
                 {
@@ -215,7 +226,7 @@ function StoreUI:showSearchDialog(parent_menu)
                     callback = function()
                         self.search_query = input_dlg:getInputText()
                         UIManager:close(input_dlg)
-                        self:showStoreMenu(parent_menu)
+                        self:showStoreMenu()
                     end,
                 },
             }
@@ -258,6 +269,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
             callback = function()
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
+                    self:showStoreMenu()
                 end)
             end,
         })
@@ -267,6 +279,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
             callback = function()
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
+                    self:showStoreMenu()
                 end)
             end,
         })
@@ -276,6 +289,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
             callback = function()
                 Installer:installPackage(pkg_id, pkg, function(success, msg)
                     UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
+                    self:showStoreMenu()
                 end)
             end,
         })
@@ -291,6 +305,7 @@ function StoreUI:showPackageDetails(pkg_id, pkg)
                     ok_callback = function()
                         Installer:uninstallPackage(pkg_id, pkg, function(success, msg)
                             UIManager:show(InfoMessage:new{ text = msg, timeout = 3 })
+                            self:showStoreMenu()
                         end)
                     end,
                 })

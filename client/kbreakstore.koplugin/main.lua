@@ -23,27 +23,27 @@ function KBreakStore:addToMainMenu(menu_items)
         help_text = _("Browse and install Kindle homebrew, tools, and KOReader plugins"),
         sub_item_table = {
             {
-                text = _("Browse All Packages"),
-                callback = function(touch_menu)
+                text = _("Browse All Packages (140+)"),
+                callback = function()
                     StoreUI.current_category = "all"
                     StoreUI.search_query = ""
-                    StoreUI:showStoreMenu(touch_menu)
+                    StoreUI:showStoreMenu()
                 end,
             },
             {
                 text = _("Installed on Device"),
-                callback = function(touch_menu)
+                callback = function()
                     StoreUI.current_category = "installed"
                     StoreUI.search_query = ""
-                    StoreUI:showStoreMenu(touch_menu)
+                    StoreUI:showStoreMenu()
                 end,
             },
             {
                 text = _("Sync Online Repository"),
-                callback = function(touch_menu)
+                callback = function()
                     RepoManager:fetchManifest(nil, function(success)
                         StoreUI.current_category = "all"
-                        StoreUI:showStoreMenu(touch_menu)
+                        StoreUI:showStoreMenu()
                     end)
                 end,
             },
