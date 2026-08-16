@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": 1,
+  "sources": [
+    {
+      "id": "koreader",
+      "name": "KOReader",
+      "author": "KOReader Team",
+      "description": "An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats.",
+      "category": "readers",
+      "package_type": "system",
+      "homepage": "https://koreader.rocks",
+      "github_repo": "koreader/koreader",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "kindlehf": "koreader-kindlehf-v*.zip",
+        "kindlepw2": "koreader-kindlepw2-v*.zip",
+        "kindle": "koreader-kindle-v*.zip"
+      }
+    },
+    {
+      "id": "kterm",
+      "name": "kTerm",
+      "author": "NiLuJe / baf",
+      "description": "VT100 terminal emulator for Kindle devices.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920",
+      "github_repo": "cathay4t/kterm",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "kindlehf": "*kindlehf*.zip",
+        "kindlepw2": "*kindlepw2*.zip"
+      }
+    },
+    {
+      "id": "linkss",
+      "name": "ScreenSavers Hack",
+      "author": "NiLuJe",
+      "description": "Custom screensavers hack for jailbroken Kindle devices.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
+      "github_repo": "NiLuJe/kindle-linkss",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "kindlehf": "*kindle-linkss*.tar.xz"
+      }
+    },
+    {
+      "id": "fbink",
+      "name": "FBInk",
+      "author": "NiLuJe",
+      "description": "E-Ink frame-buffer character, image and rectangle drawing utility.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://github.com/NiLuJe/FBInk",
+      "github_repo": "NiLuJe/FBInk",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "kindlehf": "*FBInk*.tar.gz"
+      }
+    },
+    {
+      "id": "kbreakstore",
+      "name": "KindleBreak Store",
+      "author": "KindleBreak Team",
+      "description": "On-device store to discover, install, and update homebrew and KOReader plugins.",
+      "category": "store",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Guilhermesscastro/kbreakstore",
+      "github_repo": "Guilhermesscastro/kbreakstore",
+      "release_strategy": "latest",
+      "asset_filters": {
+        "all": "kbreakstore.koplugin.zip"
+      }
+    }
+  ]
+}

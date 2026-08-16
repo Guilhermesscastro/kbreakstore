@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Temporary / Cache
+*.cache
+/tmp/
+manifest_cache.json
+installed.json
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

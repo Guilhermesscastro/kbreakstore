@@ -1,0 +1,148 @@
+{
+  "manifest_version": 2,
+  "id": "kbreakstore",
+  "name": "KindleBreak Store",
+  "description": "Unified homebrew and KOReader plugin repository for jailbroken Kindles",
+  "url": "https://raw.githubusercontent.com/Guilhermesscastro/kbreakstore/main/registry/",
+  "packages": {
+    "koreader": {
+      "name": "KOReader",
+      "author": "KOReader Team",
+      "description": "An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats.",
+      "category": "readers",
+      "package_type": "system",
+      "homepage": "https://koreader.rocks",
+      "artifacts": [
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/koreader-kindlehf-v2026.07.1.zip",
+          "version": [
+            2026,
+            7,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        },
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/koreader-kindlepw2-v2026.07.1.zip",
+          "version": [
+            2026,
+            7,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlepw2"
+          ]
+        },
+        {
+          "url": "https://github.com/koreader/koreader/releases/download/v2026.07.1/koreader-kindle-v2026.07.1.zip",
+          "version": [
+            2026,
+            7,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "kterm": {
+      "name": "kTerm",
+      "author": "NiLuJe / baf",
+      "description": "VT100 terminal emulator for Kindle devices.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=199920",
+      "artifacts": [
+        {
+          "url": "https://github.com/cathay4t/kterm/releases/download/v0.7k/kterm-kindlehf.zip",
+          "version": [
+            0,
+            7,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "linkss": {
+      "name": "ScreenSavers Hack",
+      "author": "NiLuJe",
+      "description": "Custom screensavers hack for jailbroken Kindle devices.",
+      "category": "tweaks",
+      "package_type": "system",
+      "homepage": "https://www.mobileread.com/forums/showthread.php?t=195474",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/kindle-linkss/releases/download/v0.25.N/kindle-linkss-0.25.N-r19245.tar.xz",
+          "version": [
+            0,
+            25,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "fbink": {
+      "name": "FBInk",
+      "author": "NiLuJe",
+      "description": "E-Ink frame-buffer character, image and rectangle drawing utility.",
+      "category": "utilities",
+      "package_type": "system",
+      "homepage": "https://github.com/NiLuJe/FBInk",
+      "artifacts": [
+        {
+          "url": "https://github.com/NiLuJe/FBInk/releases/download/v1.25.0/FBInk-v1.25.0.tar.gz",
+          "version": [
+            1,
+            25,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        }
+      ]
+    },
+    "kbreakstore": {
+      "name": "KindleBreak Store",
+      "author": "KindleBreak Team",
+      "description": "On-device store to discover, install, and update homebrew and KOReader plugins.",
+      "category": "store",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/Guilhermesscastro/kbreakstore",
+      "artifacts": [
+        {
+          "url": "https://github.com/Guilhermesscastro/kbreakstore/releases/download/v1.0.0/kbreakstore.koplugin.zip",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    }
+  }
+}

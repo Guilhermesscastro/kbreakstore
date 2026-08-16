@@ -1,0 +1,44 @@
+name: Update Registry
+
+on:
+  schedule:
+    # Run twice daily at 00:00 and 12:00 UTC
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Scraper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python tools/scraper.py --config registry/sources.json --output registry/manifest.v2.json
+
+      - name: Validate Generated Manifest
+        run: |
+          python tools/packager.py validate registry/manifest.v2.json
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action [KindleBreak Bot]"
+          git add registry/manifest.v2.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(registry): auto-update manifest releases [skip ci]"
+            git push
+          else
+            echo "No changes in registry manifest."
+          fi
