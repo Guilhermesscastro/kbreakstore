@@ -1141,7 +1141,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/readest/readest",
-      "stars": 23696,
+      "stars": 23707,
       "artifacts": [
         {
           "url": "https://github.com/readest/readest/releases/download/v0.12.1/Readest-0.12.1-1.koplugin.zip",
@@ -1166,7 +1166,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/ZlibraryKO/zlibrary.koplugin",
-      "stars": 676,
+      "stars": 677,
       "artifacts": [
         {
           "url": "https://github.com/ZlibraryKO/zlibrary.koplugin/releases/download/v1.0.47-9501072cd75accd629d97b3ac8a3b250737c540b/zlibrary_plugin_v1.0.47.zip",
@@ -1216,7 +1216,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/weread.koplugin",
-      "stars": 600,
+      "stars": 605,
       "artifacts": [
         {
           "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.2.0/weread.koplugin-v1.2.0.zip",
@@ -1241,7 +1241,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/AnthonyGress/zen_ui.koplugin",
-      "stars": 574,
+      "stars": 577,
       "artifacts": [
         {
           "url": "https://github.com/AnthonyGress/zen_ui.koplugin/releases/download/v3.1.0/zenos.koplugin.zip",
@@ -1316,13 +1316,13 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
-      "stars": 449,
+      "stars": 456,
       "artifacts": [
         {
-          "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v5.1.0/miuread-v5.1.0-full.zip",
+          "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v5.2.0/miuread-v5.2.0-full.zip",
           "version": [
             5,
-            1,
+            2,
             0
           ],
           "dependencies": [],
@@ -1466,7 +1466,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/greywolf1499/opds_plus.koplugin",
-      "stars": 171,
+      "stars": 172,
       "artifacts": [
         {
           "url": "https://github.com/greywolf1499/opds_plus.koplugin/releases/download/v1.2.0/opds_plus.koplugin.zip",
@@ -2191,7 +2191,7 @@
       "category": "tweaks",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/simpleui_ext.koplugin",
-      "stars": 63,
+      "stars": 64,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/simpleui_ext.koplugin/releases/download/v1.14.0/simpleui_ext.koplugin.zip",
@@ -2419,11 +2419,11 @@
       "stars": 46,
       "artifacts": [
         {
-          "url": "https://github.com/omer-faruq/instapaper.koplugin/releases/download/v1.3.3/instapaper.koplugin.zip",
+          "url": "https://github.com/omer-faruq/instapaper.koplugin/releases/download/v1.4.0/instapaper.koplugin.zip",
           "version": [
             1,
-            3,
-            3
+            4,
+            0
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -2591,7 +2591,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/kbarni/KinAMP",
-      "stars": 39,
+      "stars": 40,
       "artifacts": [
         {
           "url": "https://github.com/kbarni/KinAMP/releases/download/3.0beta/kinamp.zip",
@@ -2816,7 +2816,7 @@
       "category": "dict",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/ankiviewer.koplugin",
-      "stars": 30,
+      "stars": 31,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/ankiviewer.koplugin/releases/download/v1.3.0/ankiviewer.koplugin.zip",
@@ -3016,7 +3016,7 @@
       "category": "ai",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Euphoriyy/derainbowify.koplugin",
-      "stars": 25,
+      "stars": 26,
       "artifacts": [
         {
           "url": "https://github.com/Euphoriyy/derainbowify.koplugin/releases/download/v0.0.12/derainbowify.koplugin.zip",
