@@ -1141,7 +1141,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/readest/readest",
-      "stars": 24075,
+      "stars": 24088,
       "artifacts": [
         {
           "url": "https://github.com/readest/readest/releases/download/v0.12.6/Readest-0.12.6-1.koplugin.zip",
@@ -1166,14 +1166,14 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/ZlibraryKO/zlibrary.koplugin",
-      "stars": 723,
+      "stars": 725,
       "artifacts": [
         {
-          "url": "https://github.com/ZlibraryKO/zlibrary.koplugin/releases/download/v1.0.48-67b38b7351414ac4590e5fa30be159fb0556750c/zlibrary_plugin_v1.0.48.zip",
+          "url": "https://github.com/ZlibraryKO/zlibrary.koplugin/releases/download/v1.0.49-e3c07c1014e2a50b0cfae757c476c16cb38efec1/zlibrary_plugin_v1.0.49.zip",
           "version": [
             1,
             0,
-            48
+            49
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -1216,14 +1216,14 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/weread.koplugin",
-      "stars": 679,
+      "stars": 680,
       "artifacts": [
         {
-          "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.3.1/weread.koplugin-v1.3.1.zip",
+          "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.4.0/weread.koplugin-v1.4.0.zip",
           "version": [
             1,
-            3,
-            1
+            4,
+            0
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -1266,7 +1266,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/appstore.koplugin",
-      "stars": 531,
+      "stars": 532,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/appstore.koplugin/releases/download/v1.13.0/appstore.koplugin.zip",
@@ -1291,7 +1291,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/AndyHazz/bookends.koplugin",
-      "stars": 432,
+      "stars": 433,
       "artifacts": [
         {
           "url": "https://github.com/AndyHazz/bookends.koplugin/releases/download/v5.25.0/bookends.koplugin-v5.25.0.zip",
@@ -1316,7 +1316,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
-      "stars": 526,
+      "stars": 531,
       "artifacts": [
         {
           "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v5.6.0/miuread-v5.6.0-full.zip",
@@ -1341,7 +1341,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/pengcw/legado.koplugin",
-      "stars": 287,
+      "stars": 288,
       "artifacts": [
         {
           "url": "https://github.com/pengcw/legado.koplugin/releases/download/1.1.7/legado_plugin_update.zip",
@@ -1491,7 +1491,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/OGKevin/kobo.koplugin",
-      "stars": 170,
+      "stars": 171,
       "artifacts": [
         {
           "url": "https://github.com/OGKevin/kobo.koplugin/releases/download/v0.4.1/kobo-patches.zip",
@@ -1516,7 +1516,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/dani84bs/AnnotationSync.koplugin",
-      "stars": 176,
+      "stars": 177,
       "artifacts": [
         {
           "url": "https://github.com/dani84bs/AnnotationSync.koplugin/releases/download/v2.0.0/AnnotationSync.koplugin.zip",
@@ -1616,7 +1616,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/stradichenko/audiobook.koplugin",
-      "stars": 140,
+      "stars": 141,
       "artifacts": [
         {
           "url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.1.17.51/audiobook-koplugin-v0.1.17.51.zip",
@@ -1641,7 +1641,7 @@
       "category": "tweaks",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin",
-      "stars": 135,
+      "stars": 137,
       "artifacts": [
         {
           "url": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/releases/download/v4.2/Swipe_Animation.koplugin_v4.2.zip",
@@ -2066,7 +2066,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/gytwo/pinyin_enhancement.koplugin",
-      "stars": 85,
+      "stars": 86,
       "artifacts": [
         {
           "url": "https://github.com/gytwo/pinyin_enhancement.koplugin/releases/download/v1.5.3/pinyin_enhancement.koplugin.zip",
@@ -2616,7 +2616,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/uttam-salamander/koreader-life-tracker",
-      "stars": 37,
+      "stars": 38,
       "artifacts": [
         {
           "url": "https://github.com/uttam-salamander/koreader-life-tracker/releases/download/v0.1.0/lifetracker.koplugin.zip",
@@ -2641,7 +2641,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/gytwo/quickui.koplugin",
-      "stars": 49,
+      "stars": 50,
       "artifacts": [
         {
           "url": "https://github.com/gytwo/quickui.koplugin/releases/download/v1.0.4/quickui.koplugin.zip",
@@ -2966,7 +2966,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/renandeivison/quicksettings",
-      "stars": 35,
+      "stars": 36,
       "artifacts": [
         {
           "url": "https://github.com/renandeivison/quicksettings/archive/refs/heads/main.zip",
@@ -3216,7 +3216,7 @@
       "category": "dict",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Magyarapointe/mokuroreader-koreader",
-      "stars": 24,
+      "stars": 25,
       "artifacts": [
         {
           "url": "https://github.com/Magyarapointe/mokuroreader-koreader/releases/download/V2.1.0/mokuroreader-v2.1.0-standard.zip",
@@ -3766,7 +3766,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/ultimatejimmy/libbee",
-      "stars": 39,
+      "stars": 40,
       "artifacts": [
         {
           "url": "https://github.com/ultimatejimmy/libbee/releases/download/26.8.27/libbee.koplugin.zip",
@@ -3791,7 +3791,7 @@
       "category": "ai",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Estela-Zelin84/inkstain.koplugin",
-      "stars": 26,
+      "stars": 27,
       "artifacts": [
         {
           "url": "https://github.com/Estela-Zelin84/inkstain.koplugin/releases/download/v3.8.2/inkstain.koplugin-v3.8.2.zip",
@@ -3816,7 +3816,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/xZenLabs/zen-os",
-      "stars": 651,
+      "stars": 653,
       "artifacts": [
         {
           "url": "https://github.com/xZenLabs/zen-os/releases/download/v3.2.2/zenos.koplugin.zip",
@@ -3841,7 +3841,7 @@
       "category": "tweaks",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/readingstyle.koplugin",
-      "stars": 21,
+      "stars": 22,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/readingstyle.koplugin/releases/download/v1.2.0/readingstyle.koplugin.zip",
@@ -3891,7 +3891,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/kaikozlov/kindle.koplugin",
-      "stars": 28,
+      "stars": 31,
       "artifacts": [
         {
           "url": "https://github.com/kaikozlov/kindle.koplugin/releases/download/v0.0.5/kindle-koplugin-armv7.zip",
@@ -3916,7 +3916,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/xZenLabs/zen-fm",
-      "stars": 25,
+      "stars": 26,
       "artifacts": [
         {
           "url": "https://github.com/xZenLabs/zen-fm/releases/download/v1.0.4/ZenFM-koreader-android-1.0.4.zip",
