@@ -1141,7 +1141,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/readest/readest",
-      "stars": 24194,
+      "stars": 24214,
       "artifacts": [
         {
           "url": "https://github.com/readest/readest/releases/download/v0.12.8/Readest-0.12.8-1.koplugin.zip",
@@ -1166,7 +1166,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/ZlibraryKO/zlibrary.koplugin",
-      "stars": 732,
+      "stars": 734,
       "artifacts": [
         {
           "url": "https://github.com/ZlibraryKO/zlibrary.koplugin/releases/download/v1.0.49-e3c07c1014e2a50b0cfae757c476c16cb38efec1/zlibrary_plugin_v1.0.49.zip",
@@ -1216,7 +1216,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/weread.koplugin",
-      "stars": 695,
+      "stars": 699,
       "artifacts": [
         {
           "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.4.2/weread.koplugin-v1.4.2.zip",
@@ -1266,7 +1266,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/appstore.koplugin",
-      "stars": 540,
+      "stars": 541,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/appstore.koplugin/releases/download/v1.13.0/appstore.koplugin.zip",
@@ -1316,7 +1316,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
-      "stars": 551,
+      "stars": 553,
       "artifacts": [
         {
           "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v5.7.5/miuread-v5.7.5-full.zip",
@@ -1641,7 +1641,7 @@
       "category": "tweaks",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin",
-      "stars": 139,
+      "stars": 140,
       "artifacts": [
         {
           "url": "https://github.com/koplugin-swipe-animation/Swipe_Animation.koplugin/releases/download/v4.2/Swipe_Animation.koplugin_v4.2.zip",
@@ -1991,7 +1991,7 @@
       "category": "games",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/kindlebtcontroller.koplugin",
-      "stars": 98,
+      "stars": 99,
       "artifacts": [
         {
           "url": "https://github.com/finlater/kindlebtcontroller.koplugin/releases/download/v0.1.6/kindlebtcontroller.koplugin.zip",
@@ -2566,7 +2566,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/abrahamnm/filesync.koplugin",
-      "stars": 69,
+      "stars": 68,
       "artifacts": [
         {
           "url": "https://github.com/abrahamnm/filesync.koplugin/releases/download/v1.8.0/filesync.koplugin.zip",
@@ -2641,7 +2641,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/gytwo/quickui.koplugin",
-      "stars": 50,
+      "stars": 51,
       "artifacts": [
         {
           "url": "https://github.com/gytwo/quickui.koplugin/releases/download/v1.0.5/quickui.koplugin.zip",
@@ -2766,7 +2766,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/titandrive/koboard",
-      "stars": 30,
+      "stars": 31,
       "artifacts": [
         {
           "url": "https://github.com/titandrive/koboard/releases/download/v0.6.5/koboard.koplugin.zip",
@@ -3566,7 +3566,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/jbreizh/quickmenu.koplugin",
-      "stars": 26,
+      "stars": 25,
       "artifacts": [
         {
           "url": "https://github.com/jbreizh/quickmenu.koplugin/releases/download/1.9/quickmenu.koplugin.zip",
@@ -3666,7 +3666,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/yanllsama/Neo-QuickSettings-for-KOReader",
-      "stars": 30,
+      "stars": 29,
       "artifacts": [
         {
           "url": "https://github.com/yanllsama/Neo-QuickSettings-for-KOReader/releases/download/v1.21/neo_quicksetting.koplugin.zip",
@@ -3816,7 +3816,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/xZenLabs/zen-os",
-      "stars": 668,
+      "stars": 669,
       "artifacts": [
         {
           "url": "https://github.com/xZenLabs/zen-os/releases/download/v3.2.2/zenos.koplugin.zip",
@@ -3891,7 +3891,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/kaikozlov/kindle.koplugin",
-      "stars": 45,
+      "stars": 49,
       "artifacts": [
         {
           "url": "https://github.com/kaikozlov/kindle.koplugin/releases/download/v0.0.5/kindle-koplugin-armv7.zip",
@@ -3924,6 +3924,56 @@
             1,
             0,
             4
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "updatesmanager": {
+      "name": "Updatesmanager",
+      "author": "advokatb",
+      "description": "Updates Manager is a plugin for KOReader that helps you manage updates for patches and plugins from multiple GitHub repositories",
+      "category": "tweaks",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/advokatb/updatesmanager.koplugin",
+      "stars": 112,
+      "artifacts": [
+        {
+          "url": "https://github.com/advokatb/updatesmanager.koplugin/releases/download/v1.5.1/updatesmanager.koplugin-v1.5.1.zip",
+          "version": [
+            1,
+            5,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2",
+            "kindle"
+          ]
+        }
+      ]
+    },
+    "readingstreak": {
+      "name": "Readingstreak",
+      "author": "advokatb",
+      "description": "KOReader plugin for tracking daily and weekly reading streaks",
+      "category": "ai",
+      "package_type": "koreader_plugin",
+      "homepage": "https://github.com/advokatb/readingstreak.koplugin",
+      "stars": 61,
+      "artifacts": [
+        {
+          "url": "https://github.com/advokatb/readingstreak.koplugin/releases/download/v1.5.0/readingstreak.koplugin-v1.5.0.zip",
+          "version": [
+            1,
+            5,
+            0
           ],
           "dependencies": [],
           "supported_platforms": [
