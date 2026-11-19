@@ -1141,7 +1141,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/readest/readest",
-      "stars": 26453,
+      "stars": 26478,
       "artifacts": [
         {
           "url": "https://github.com/readest/readest/releases/download/v0.12.20/Readest-0.12.20-1.koplugin.zip",
@@ -1216,7 +1216,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/weread.koplugin",
-      "stars": 1093,
+      "stars": 1095,
       "artifacts": [
         {
           "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.7.1/weread.koplugin-v1.7.1.zip",
@@ -1266,7 +1266,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/appstore.koplugin",
-      "stars": 679,
+      "stars": 680,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/appstore.koplugin/releases/download/v1.15.0/appstore.koplugin.zip",
@@ -1316,7 +1316,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
-      "stars": 756,
+      "stars": 762,
       "artifacts": [
         {
           "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v6.4.1/miuread-v6.4.1-full.zip",
@@ -1366,7 +1366,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/gitalexcampos/highlightsync.koplugin",
-      "stars": 243,
+      "stars": 244,
       "artifacts": [
         {
           "url": "https://github.com/gitalexcampos/highlightsync.koplugin/archive/refs/heads/master.zip",
@@ -3566,7 +3566,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/jbreizh/quickmenu.koplugin",
-      "stars": 45,
+      "stars": 46,
       "artifacts": [
         {
           "url": "https://github.com/jbreizh/quickmenu.koplugin/releases/download/2.0/quickmenu.koplugin.zip",
@@ -3816,7 +3816,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/xZenLabs/zen-os",
-      "stars": 970,
+      "stars": 971,
       "artifacts": [
         {
           "url": "https://github.com/xZenLabs/zen-os/releases/download/v4.3.2/zenos.koplugin.zip",
@@ -4016,14 +4016,14 @@
       "category": "dict",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/AnkioTomas/moon",
-      "stars": 431,
+      "stars": 434,
       "artifacts": [
         {
-          "url": "https://github.com/AnkioTomas/moon/releases/download/v0.7.1/book.koplugin-v0.7.1.zip",
+          "url": "https://github.com/AnkioTomas/moon/releases/download/v0.7.2/book.koplugin-v0.7.2.zip",
           "version": [
             0,
             7,
-            1
+            2
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -4041,7 +4041,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/EmirErtorer/ink-away.koplugin",
-      "stars": 171,
+      "stars": 172,
       "artifacts": [
         {
           "url": "https://github.com/EmirErtorer/ink-away.koplugin/releases/download/v4.5.2/ink-away.koplugin-v4.5.2.zip",
@@ -4066,7 +4066,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Lyfts/ShelfSync",
-      "stars": 68,
+      "stars": 69,
       "artifacts": [
         {
           "url": "https://github.com/Lyfts/ShelfSync/releases/download/1.8.4/shelfsync-fetch-cookies.zip",
@@ -4266,7 +4266,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/stevenzamora1/reading-log",
-      "stars": 98,
+      "stars": 99,
       "artifacts": [
         {
           "url": "https://github.com/stevenzamora1/reading-log/releases/download/v1.5.2/readinglog-1.5.2.zip",
@@ -4341,7 +4341,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/Craftwork2720/meguru",
-      "stars": 33,
+      "stars": 34,
       "artifacts": [
         {
           "url": "https://github.com/Craftwork2720/meguru/releases/download/v1.8.9/meguru.koplugin.zip",
