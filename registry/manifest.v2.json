@@ -1141,7 +1141,7 @@
       "category": "sync",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/readest/readest",
-      "stars": 26737,
+      "stars": 26748,
       "artifacts": [
         {
           "url": "https://github.com/readest/readest/releases/download/v0.12.26/Readest-0.12.26-1.koplugin.zip",
@@ -1216,7 +1216,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/finlater/weread.koplugin",
-      "stars": 1123,
+      "stars": 1126,
       "artifacts": [
         {
           "url": "https://github.com/finlater/weread.koplugin/releases/download/v1.7.1/weread.koplugin-v1.7.1.zip",
@@ -1266,7 +1266,7 @@
       "category": "library",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/omer-faruq/appstore.koplugin",
-      "stars": 696,
+      "stars": 697,
       "artifacts": [
         {
           "url": "https://github.com/omer-faruq/appstore.koplugin/releases/download/v1.15.0/appstore.koplugin.zip",
@@ -1316,7 +1316,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/miumiupy98-art/miuread-koreader",
-      "stars": 793,
+      "stars": 795,
       "artifacts": [
         {
           "url": "https://github.com/miumiupy98-art/miuread-koreader/releases/download/v6.5.7/miuread-v6.5.7-full.zip",
@@ -1619,11 +1619,11 @@
       "stars": 210,
       "artifacts": [
         {
-          "url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.6.18/audiobook-koplugin-v0.6.18.zip",
+          "url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.6.19/audiobook-koplugin-v0.6.19.zip",
           "version": [
             0,
             6,
-            18
+            19
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -1694,10 +1694,10 @@
       "stars": 148,
       "artifacts": [
         {
-          "url": "https://github.com/Euphoriyy/appearance.koplugin/releases/download/v1.9.0/appearance.koplugin.zip",
+          "url": "https://github.com/Euphoriyy/appearance.koplugin/releases/download/v1.10.0/appearance.koplugin.zip",
           "version": [
             1,
-            9,
+            10,
             0
           ],
           "dependencies": [],
@@ -1894,10 +1894,10 @@
       "stars": 175,
       "artifacts": [
         {
-          "url": "https://github.com/peterboda236/readinginsights.koplugin/releases/download/v9.2.0/readinginsights.koplugin.zip",
+          "url": "https://github.com/peterboda236/readinginsights.koplugin/releases/download/v9.3.0/readinginsights.koplugin.zip",
           "version": [
             9,
-            2,
+            3,
             0
           ],
           "dependencies": [],
@@ -2066,7 +2066,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/gytwo/pinyin_enhancement.koplugin",
-      "stars": 113,
+      "stars": 114,
       "artifacts": [
         {
           "url": "https://github.com/gytwo/pinyin_enhancement.koplugin/releases/download/v1.5.3/pinyin_enhancement.koplugin.zip",
@@ -3694,10 +3694,10 @@
       "stars": 94,
       "artifacts": [
         {
-          "url": "https://github.com/KristanLaimon/PanelsPlus/releases/download/v1.6.0/panelsplus_with_ocrmodels.koplugin.zip",
+          "url": "https://github.com/KristanLaimon/PanelsPlus/releases/download/v1.7.0/panelsplus_with_ocrmodels.koplugin.zip",
           "version": [
             1,
-            6,
+            7,
             0
           ],
           "dependencies": [],
@@ -3816,7 +3816,7 @@
       "category": "readers",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/xZenLabs/zen-os",
-      "stars": 1000,
+      "stars": 1001,
       "artifacts": [
         {
           "url": "https://github.com/xZenLabs/zen-os/releases/download/v4.3.2/zenos.koplugin.zip",
@@ -4016,7 +4016,7 @@
       "category": "dict",
       "package_type": "koreader_plugin",
       "homepage": "https://github.com/AnkioTomas/moon",
-      "stars": 484,
+      "stars": 488,
       "artifacts": [
         {
           "url": "https://github.com/AnkioTomas/moon/releases/download/v0.8.1/book.koplugin-v0.8.1.zip",
